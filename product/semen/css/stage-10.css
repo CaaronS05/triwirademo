@@ -1,0 +1,493 @@
+/* ==========================================================
+   STAGE 10 — FOOTER PRODUK SEMEN
+========================================================== */
+
+.semen-footer {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    padding:
+        58px 0 25px;
+
+    background-color: #090b0c;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+.semen-footer-background {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+
+    background:
+        radial-gradient(circle at 17% 20%,
+            rgba(255, 255, 255, 0.045),
+            transparent 30%),
+        radial-gradient(circle at 82% 75%,
+            rgba(255, 255, 255, 0.035),
+            transparent 33%),
+        linear-gradient(115deg,
+            rgba(255, 255, 255, 0.01),
+            rgba(0, 0, 0, 0.18),
+            rgba(255, 255, 255, 0.008)),
+        #090b0c;
+}
+
+.semen-footer-background::before {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        repeating-linear-gradient(18deg,
+            transparent 0,
+            transparent 34px,
+            rgba(255, 255, 255, 0.012) 35px,
+            transparent 36px),
+        repeating-linear-gradient(-25deg,
+            transparent 0,
+            transparent 58px,
+            rgba(255, 255, 255, 0.01) 59px,
+            transparent 60px);
+
+    content: "";
+
+    opacity: 0.8;
+}
+
+
+/* ==========================================================
+   MAIN LAYOUT
+========================================================== */
+
+.semen-footer-main {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns:
+        minmax(250px, 1.35fr) minmax(130px, 0.65fr) minmax(210px, 1fr) minmax(270px, 1.15fr);
+    gap: clamp(38px, 5vw, 78px);
+
+    width: 100%;
+}
+
+
+/* ==========================================================
+   BRAND
+========================================================== */
+
+.semen-footer-brand {
+    min-width: 0;
+}
+
+.semen-footer-logo-link {
+    display: inline-flex;
+    align-items: center;
+
+    max-width: 230px;
+}
+
+.semen-footer-logo {
+    display: block;
+
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+
+    filter: brightness(0) invert(1);
+}
+
+.semen-footer-brand-description {
+    max-width: 315px;
+    margin: 25px 0 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   COLUMNS
+========================================================== */
+
+.semen-footer-column {
+    min-width: 0;
+}
+
+.semen-footer-column-title {
+    margin: 0 0 18px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.semen-footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.semen-footer-links a {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    transition:
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+.semen-footer-links a::before {
+    margin-right: 7px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    content: "•";
+}
+
+.semen-footer-links a:hover,
+.semen-footer-links a[aria-current="page"] {
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+.semen-footer-links a[aria-current="page"]::before {
+    color: #ef0000;
+}
+
+
+/* ==========================================================
+   CONTACT
+========================================================== */
+
+.semen-footer-contact {
+    position: relative;
+    z-index: 2;
+
+    min-width: 0;
+}
+
+.semen-footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.semen-footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+a.semen-footer-contact-item {
+    transition:
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+a.semen-footer-contact-item:hover {
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+.semen-footer-contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    width: 29px;
+    height: 29px;
+
+    color: #ffffff;
+}
+
+.semen-footer-contact-icon svg,
+.semen-footer-contact-icon img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ==========================================================
+   LANGUAGE
+========================================================== */
+
+.semen-footer-language {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: fit-content;
+    margin-top: 23px;
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.semen-footer-language a,
+.semen-footer-language span {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.semen-footer-language a {
+    transition: color 180ms ease;
+}
+
+.semen-footer-language a:hover,
+.semen-footer-language a.is-active {
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   LEGAL LINKS
+========================================================== */
+
+.semen-footer-legal-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+
+    margin-top: 17px;
+}
+
+.semen-footer-legal-links a,
+.semen-footer-legal-links span {
+    color: rgba(255, 255, 255, 0.54);
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.semen-footer-legal-links a {
+    transition: color 180ms ease;
+}
+
+.semen-footer-legal-links a:hover {
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   FOOTER BOTTOM
+========================================================== */
+
+.semen-footer-bottom {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    margin-top: 43px;
+    padding-top: 19px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.semen-footer-bottom p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.52);
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   RED CHEVRON
+========================================================== */
+
+.semen-footer-chevron {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 63%;
+    z-index: 1;
+
+    width: 125px;
+
+    pointer-events: none;
+}
+
+.semen-footer-chevron-top,
+.semen-footer-chevron-bottom {
+    position: absolute;
+    left: 34px;
+
+    width: 29px;
+    height: 59%;
+
+    background:
+        linear-gradient(180deg,
+            #f32900 0%,
+            #db1500 100%);
+}
+
+.semen-footer-chevron-top {
+    top: -32px;
+
+    transform: rotate(-34deg);
+    transform-origin: bottom center;
+}
+
+.semen-footer-chevron-bottom {
+    bottom: -32px;
+
+    transform: rotate(34deg);
+    transform-origin: top center;
+}
+
+
+/* ==========================================================
+   LARGE LAPTOP
+========================================================== */
+
+@media (max-width: 1380px) {
+    .semen-footer-main {
+        grid-template-columns:
+            minmax(220px, 1.25fr) minmax(115px, 0.58fr) minmax(185px, 0.95fr) minmax(235px, 1.1fr);
+        gap: 42px;
+    }
+
+    .semen-footer-logo {
+        max-width: 190px;
+    }
+
+    .semen-footer-chevron {
+        left: 61%;
+
+        opacity: 0.9;
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1050px) {
+    .semen-footer-main {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap:
+            48px 55px;
+    }
+
+    .semen-footer-chevron {
+        right: 60px;
+        left: auto;
+
+        opacity: 0.25;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 760px) {
+    .semen-footer {
+        padding-top: 50px;
+    }
+
+    .semen-footer-main {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .semen-footer-brand-description {
+        max-width: 500px;
+    }
+
+    .semen-footer-chevron {
+        right: -35px;
+        left: auto;
+
+        opacity: 0.18;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 560px) {
+    .semen-footer {
+        padding:
+            44px 0 22px;
+    }
+
+    .semen-footer-main {
+        gap: 32px;
+    }
+
+    .semen-footer-logo {
+        max-width: 175px;
+    }
+
+    .semen-footer-brand-description {
+        margin-top: 20px;
+
+        font-size: 12px;
+    }
+
+    .semen-footer-column-title {
+        margin-bottom: 15px;
+    }
+
+    .semen-footer-links {
+        gap: 8px;
+    }
+
+    .semen-footer-contact-item {
+        font-size: 12px;
+    }
+
+    .semen-footer-bottom {
+        margin-top: 35px;
+    }
+
+    .semen-footer-chevron {
+        display: none;
+    }
+}

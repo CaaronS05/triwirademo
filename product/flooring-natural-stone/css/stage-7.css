@@ -1,0 +1,518 @@
+/* ==========================================================
+   STAGE 7 — APLIKASI FLOORING & NATURAL STONE
+========================================================== */
+
+.flooring-applications-section {
+    width: 100%;
+    padding:
+        clamp(56px, 5.8vw, 84px) 0 clamp(66px, 6.8vw, 98px);
+
+    background-color: #ffffff;
+    border-top: 1px solid #e2e2e2;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.flooring-applications-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 34px;
+
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.flooring-applications-title {
+    margin: 0;
+
+    color: var(--flooring-black);
+
+    font-size: clamp(29px, 2.5vw, 39px);
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -1.35px;
+}
+
+.flooring-applications-subtitle {
+    max-width: 500px;
+    margin: 0;
+
+    color: var(--flooring-text);
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.7;
+    text-align: right;
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.flooring-applications-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: clamp(12px, 1.25vw, 19px);
+
+    width: 100%;
+}
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.flooring-application-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 360px;
+
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    transition:
+        border-color 220ms ease,
+        box-shadow 220ms ease,
+        transform 220ms ease;
+}
+
+.flooring-application-card:hover {
+    border-color: rgba(230, 0, 18, 0.42);
+    box-shadow: 0 17px 38px rgba(0, 0, 0, 0.08);
+
+    transform: translateY(-5px);
+}
+
+
+/* ==========================================================
+   MEDIA
+========================================================== */
+
+.flooring-application-media {
+    position: relative;
+
+    width: 100%;
+    height: 235px;
+
+    background-color: #eeeeee;
+
+    overflow: hidden;
+}
+
+.flooring-application-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 650ms ease;
+}
+
+.flooring-application-card:hover .flooring-application-image {
+    transform: scale(1.05);
+}
+
+.flooring-application-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.05) 0%,
+            transparent 48%,
+            rgba(0, 0, 0, 0.34) 100%);
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   CARD NUMBER
+========================================================== */
+
+.flooring-application-number {
+    position: absolute;
+    right: 12px;
+    bottom: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    background-color: var(--flooring-red);
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.4px;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.flooring-application-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    min-width: 0;
+    padding:
+        18px 16px 20px;
+}
+
+.flooring-application-name {
+    margin: 0;
+
+    color: #15161a;
+
+    font-size: clamp(13px, 1vw, 16px);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.25px;
+}
+
+.flooring-application-description {
+    margin: 9px 0 0;
+
+    color: #5a5c62;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+
+/* ==========================================================
+   NOTE
+========================================================== */
+
+.flooring-applications-note {
+    display: grid;
+    grid-template-columns:
+        22px minmax(0, 1fr);
+    align-items: center;
+    gap: 9px;
+
+    width: 100%;
+    margin-top: 16px;
+
+    color: #66686e;
+}
+
+.flooring-applications-note svg {
+    width: 21px;
+    height: 21px;
+
+    color: #2d2e33;
+}
+
+.flooring-applications-note p {
+    margin: 0;
+
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1600px) {
+    .flooring-application-card {
+        min-height: 390px;
+    }
+
+    .flooring-application-media {
+        height: 255px;
+    }
+
+    .flooring-application-content {
+        padding:
+            20px 18px 22px;
+    }
+
+    .flooring-application-description {
+        font-size: 11px;
+    }
+}
+
+
+/* ==========================================================
+   LARGE LAPTOP
+========================================================== */
+
+@media (max-width: 1380px) {
+    .flooring-applications-grid {
+        gap: 10px;
+    }
+
+    .flooring-application-card {
+        min-height: 325px;
+    }
+
+    .flooring-application-media {
+        height: 205px;
+    }
+
+    .flooring-application-content {
+        padding:
+            15px 13px 17px;
+    }
+
+    .flooring-application-name {
+        font-size: 12px;
+    }
+
+    .flooring-application-description {
+        margin-top: 7px;
+
+        font-size: 9px;
+    }
+
+    .flooring-application-number {
+        right: 10px;
+        bottom: 9px;
+
+        width: 31px;
+        height: 31px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1100px) {
+    .flooring-applications-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 11px;
+    }
+
+    .flooring-applications-subtitle {
+        max-width: 650px;
+
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .flooring-applications-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .flooring-application-card {
+        min-height: 385px;
+    }
+
+    .flooring-application-media {
+        height: 260px;
+    }
+
+    .flooring-application-content {
+        padding:
+            20px 18px 22px;
+    }
+
+    .flooring-application-name {
+        font-size: 17px;
+    }
+
+    .flooring-application-description {
+        margin-top: 10px;
+
+        font-size: 12px;
+    }
+
+    .flooring-application-number {
+        width: 36px;
+        height: 36px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 760px) {
+    .flooring-applications-section {
+        padding:
+            55px 0 72px;
+    }
+
+    .flooring-applications-title {
+        font-size: 37px;
+        letter-spacing: -1.2px;
+    }
+
+    .flooring-applications-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .flooring-application-card {
+        min-height: 365px;
+    }
+
+    .flooring-application-media {
+        height: 240px;
+    }
+
+    .flooring-application-name {
+        font-size: 16px;
+    }
+
+    .flooring-application-description {
+        font-size: 11px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 560px) {
+    .flooring-applications-section {
+        padding:
+            48px 0 63px;
+    }
+
+    .flooring-applications-header {
+        margin-bottom: 21px;
+    }
+
+    .flooring-applications-title {
+        font-size: 31px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    .flooring-applications-subtitle {
+        font-size: 12px;
+    }
+
+    .flooring-applications-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .flooring-application-card {
+        display: grid;
+        grid-template-columns:
+            142px minmax(0, 1fr);
+
+        min-height: 142px;
+    }
+
+    .flooring-application-media {
+        width: 142px;
+        height: 100%;
+        min-height: 142px;
+    }
+
+    .flooring-application-content {
+        justify-content: center;
+
+        padding:
+            18px 18px;
+    }
+
+    .flooring-application-name {
+        font-size: 16px;
+    }
+
+    .flooring-application-description {
+        margin-top: 8px;
+
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .flooring-application-number {
+        right: 9px;
+        bottom: 9px;
+
+        width: 30px;
+        height: 30px;
+
+        font-size: 9px;
+    }
+
+    .flooring-applications-note {
+        align-items: flex-start;
+
+        margin-top: 15px;
+    }
+
+    .flooring-applications-note p {
+        font-size: 9px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 390px) {
+    .flooring-applications-title {
+        font-size: 28px;
+    }
+
+    .flooring-application-card {
+        grid-template-columns:
+            118px minmax(0, 1fr);
+
+        min-height: 125px;
+    }
+
+    .flooring-application-media {
+        width: 118px;
+        min-height: 125px;
+    }
+
+    .flooring-application-content {
+        padding:
+            15px 14px;
+    }
+
+    .flooring-application-name {
+        font-size: 14px;
+    }
+
+    .flooring-application-description {
+        font-size: 10px;
+    }
+}

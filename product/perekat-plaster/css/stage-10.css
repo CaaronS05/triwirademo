@@ -1,0 +1,494 @@
+/* ==========================================================
+   STAGE 10 — FOOTER PEREKAT & PLASTER
+========================================================== */
+
+.perekat-footer {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    padding:
+        58px 0 24px;
+
+    background-color: #090b0c;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+.perekat-footer-background {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+
+    background:
+        radial-gradient(circle at 16% 20%,
+            rgba(255, 255, 255, 0.045),
+            transparent 30%),
+        radial-gradient(circle at 83% 75%,
+            rgba(255, 255, 255, 0.035),
+            transparent 34%),
+        linear-gradient(115deg,
+            rgba(255, 255, 255, 0.012),
+            rgba(0, 0, 0, 0.2),
+            rgba(255, 255, 255, 0.01)),
+        #090b0c;
+}
+
+.perekat-footer-background::before {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        repeating-linear-gradient(18deg,
+            transparent 0,
+            transparent 34px,
+            rgba(255, 255, 255, 0.012) 35px,
+            transparent 36px),
+        repeating-linear-gradient(-25deg,
+            transparent 0,
+            transparent 58px,
+            rgba(255, 255, 255, 0.01) 59px,
+            transparent 60px);
+
+    content: "";
+
+    opacity: 0.8;
+}
+
+
+/* ==========================================================
+   MAIN GRID
+========================================================== */
+
+.perekat-footer-main {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns:
+        minmax(250px, 1.35fr) minmax(130px, 0.65fr) minmax(210px, 1fr) minmax(270px, 1.15fr);
+    gap: clamp(38px, 5vw, 78px);
+
+    width: 100%;
+}
+
+
+/* ==========================================================
+   BRAND
+========================================================== */
+
+.perekat-footer-brand {
+    min-width: 0;
+}
+
+.perekat-footer-logo-link {
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+    max-width: 230px;
+}
+
+.perekat-footer-logo {
+    display: block;
+
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+
+    filter: brightness(0) invert(1);
+}
+
+.perekat-footer-brand-description {
+    max-width: 315px;
+    margin: 25px 0 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   FOOTER COLUMNS
+========================================================== */
+
+.perekat-footer-column {
+    min-width: 0;
+}
+
+.perekat-footer-column-title {
+    margin: 0 0 18px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.perekat-footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.perekat-footer-links a {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    transition:
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+.perekat-footer-links a::before {
+    margin-right: 7px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    content: "•";
+}
+
+.perekat-footer-links a:hover,
+.perekat-footer-links a[aria-current="page"] {
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+.perekat-footer-links a[aria-current="page"]::before {
+    color: var(--perekat-red);
+}
+
+
+/* ==========================================================
+   CONTACT
+========================================================== */
+
+.perekat-footer-contact {
+    position: relative;
+    z-index: 2;
+
+    min-width: 0;
+}
+
+.perekat-footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.perekat-footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+a.perekat-footer-contact-item {
+    transition:
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+a.perekat-footer-contact-item:hover {
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+.perekat-footer-contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    width: 29px;
+    height: 29px;
+
+    color: #ffffff;
+}
+
+.perekat-footer-contact-icon svg,
+.perekat-footer-contact-icon img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ==========================================================
+   LANGUAGE
+========================================================== */
+
+.perekat-footer-language {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: fit-content;
+    margin-top: 23px;
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.perekat-footer-language a,
+.perekat-footer-language span {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.perekat-footer-language a {
+    transition: color 180ms ease;
+}
+
+.perekat-footer-language a:hover,
+.perekat-footer-language a.is-active {
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   LEGAL LINKS
+========================================================== */
+
+.perekat-footer-legal-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+
+    margin-top: 17px;
+}
+
+.perekat-footer-legal-links a,
+.perekat-footer-legal-links span {
+    color: rgba(255, 255, 255, 0.54);
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.perekat-footer-legal-links a {
+    transition: color 180ms ease;
+}
+
+.perekat-footer-legal-links a:hover {
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   FOOTER BOTTOM
+========================================================== */
+
+.perekat-footer-bottom {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    margin-top: 43px;
+    padding-top: 19px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.perekat-footer-bottom p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.52);
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   RED CHEVRON
+========================================================== */
+
+.perekat-footer-chevron {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 63%;
+    z-index: 1;
+
+    width: 125px;
+
+    pointer-events: none;
+}
+
+.perekat-footer-chevron-top,
+.perekat-footer-chevron-bottom {
+    position: absolute;
+    left: 34px;
+
+    width: 29px;
+    height: 59%;
+
+    background:
+        linear-gradient(180deg,
+            #f32900 0%,
+            #db1500 100%);
+}
+
+.perekat-footer-chevron-top {
+    top: -32px;
+
+    transform: rotate(-34deg);
+    transform-origin: bottom center;
+}
+
+.perekat-footer-chevron-bottom {
+    bottom: -32px;
+
+    transform: rotate(34deg);
+    transform-origin: top center;
+}
+
+
+/* ==========================================================
+   LARGE LAPTOP
+========================================================== */
+
+@media (max-width: 1380px) {
+    .perekat-footer-main {
+        grid-template-columns:
+            minmax(220px, 1.25fr) minmax(115px, 0.58fr) minmax(185px, 0.95fr) minmax(235px, 1.1fr);
+        gap: 42px;
+    }
+
+    .perekat-footer-logo {
+        max-width: 190px;
+    }
+
+    .perekat-footer-chevron {
+        left: 61%;
+
+        opacity: 0.9;
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1050px) {
+    .perekat-footer-main {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap:
+            48px 55px;
+    }
+
+    .perekat-footer-chevron {
+        right: 60px;
+        left: auto;
+
+        opacity: 0.25;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 760px) {
+    .perekat-footer {
+        padding-top: 50px;
+    }
+
+    .perekat-footer-main {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .perekat-footer-brand-description {
+        max-width: 500px;
+    }
+
+    .perekat-footer-chevron {
+        right: -35px;
+        left: auto;
+
+        opacity: 0.18;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 560px) {
+    .perekat-footer {
+        padding:
+            44px 0 22px;
+    }
+
+    .perekat-footer-main {
+        gap: 32px;
+    }
+
+    .perekat-footer-logo {
+        max-width: 175px;
+    }
+
+    .perekat-footer-brand-description {
+        margin-top: 20px;
+
+        font-size: 12px;
+    }
+
+    .perekat-footer-column-title {
+        margin-bottom: 15px;
+    }
+
+    .perekat-footer-links {
+        gap: 8px;
+    }
+
+    .perekat-footer-contact-item {
+        font-size: 12px;
+    }
+
+    .perekat-footer-bottom {
+        margin-top: 35px;
+    }
+
+    .perekat-footer-chevron {
+        display: none;
+    }
+}

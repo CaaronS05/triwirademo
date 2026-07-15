@@ -1,0 +1,497 @@
+/* ==========================================================
+   STAGE 1 — HERO PRODUK SEMEN
+========================================================== */
+
+.semen-hero-section {
+    width: 100%;
+    padding:
+        26px 0 40px;
+
+    background-color: #ffffff;
+}
+
+.semen-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: #717171;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.semen-breadcrumb a {
+    color: #717171;
+    transition: color 180ms ease;
+}
+
+.semen-breadcrumb a:hover {
+    color: #ef0000;
+}
+
+.semen-breadcrumb-separator {
+    color: #9f9f9f;
+}
+
+.semen-breadcrumb-current {
+    color: #ef0000;
+    font-weight: 700;
+}
+
+.semen-hero-card {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.08fr) minmax(480px, 0.92fr);
+    gap: clamp(44px, 4vw, 72px);
+
+    width: 100%;
+    padding-bottom: 26px;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+
+/* ==========================================================
+   LEFT GALLERY
+========================================================== */
+
+.semen-hero-gallery {
+    min-width: 0;
+}
+
+.semen-hero-main-image-wrapper {
+    position: relative;
+
+    width: 100%;
+    height: clamp(620px, calc(100vh - 250px), 760px);
+
+    background-color: #f3f3f3;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.semen-hero-main-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.semen-hero-chevron {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    width: 115px;
+
+    pointer-events: none;
+}
+
+.semen-hero-chevron-top,
+.semen-hero-chevron-bottom {
+    position: absolute;
+    left: 21px;
+
+    width: 28px;
+    height: 57%;
+
+    background-color: #ef0000;
+}
+
+.semen-hero-chevron-top {
+    top: -24px;
+
+    transform: rotate(-28deg);
+    transform-origin: bottom center;
+}
+
+.semen-hero-chevron-bottom {
+    bottom: -24px;
+
+    transform: rotate(28deg);
+    transform-origin: top center;
+}
+
+/* ==========================================================
+   RIGHT CONTENT
+========================================================== */
+
+.semen-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    min-width: 0;
+    padding-top: 6px;
+}
+
+.semen-hero-copy {
+    max-width: 600px;
+}
+
+.semen-hero-eyebrow {
+    margin: 0 0 8px;
+
+    color: #ef0000;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 2.6px;
+    text-transform: uppercase;
+}
+
+.semen-hero-title {
+    margin: 0;
+
+    color: #0c0c0c;
+    font-size: clamp(44px, 4vw, 64px);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -2px;
+}
+
+.semen-hero-description {
+    margin: 12px 0 0;
+
+    color: #373737;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.semen-hero-brand-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.semen-hero-label {
+    margin: 0;
+
+    color: #444444;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.semen-hero-brand-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.semen-hero-brand-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    padding: 10px 18px;
+
+    background-color: #ffffff;
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+
+    color: #4a4a4a;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.semen-hero-note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-height: 56px;
+    padding: 14px 16px;
+
+    background-color: #fafafa;
+    border: 1px solid #d7d7d7;
+    border-radius: 6px;
+}
+
+.semen-hero-note-icon {
+    flex: 0 0 auto;
+
+    width: 20px;
+    height: 20px;
+
+    color: #555555;
+}
+
+.semen-hero-note-icon svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+.semen-hero-note p {
+    margin: 0;
+
+    color: #4c4c4c;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.semen-hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1.03fr;
+    gap: 22px;
+
+    margin-top: 28px;
+}
+
+.semen-hero-primary-btn,
+.semen-hero-secondary-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    min-height: 64px;
+    padding: 14px 20px;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease;
+}
+
+.semen-hero-primary-btn {
+    gap: 14px;
+
+    background-color: #ef0000;
+    border: 1px solid #ef0000;
+    color: #ffffff;
+}
+
+.semen-hero-primary-btn:hover {
+    background-color: #c90000;
+    border-color: #c90000;
+
+    transform: translateY(-2px);
+}
+
+.semen-hero-primary-btn-icon {
+    width: 34px;
+    height: 34px;
+}
+
+.semen-hero-primary-btn-icon svg,
+.semen-hero-primary-btn-icon img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    filter: brightness(0) invert(1);
+}
+
+.semen-hero-primary-btn-label {
+    white-space: nowrap;
+}
+
+.semen-hero-secondary-btn {
+    background-color: #ffffff;
+    border: 1px solid #ef0000;
+    color: #ef0000;
+}
+
+.semen-hero-secondary-btn:hover {
+    background-color: #ef0000;
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+.semen-hero-feature-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    margin-top: 4px;
+    padding-top: 10px;
+}
+
+.semen-hero-feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    min-width: 0;
+    padding:
+        10px 12px 0;
+
+    text-align: center;
+}
+
+.semen-hero-feature-item:not(:last-child) {
+    border-right: 1px solid #e3e3e3;
+}
+
+.semen-hero-feature-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 10px;
+
+    color: #222222;
+}
+
+.semen-hero-feature-icon svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+.semen-hero-feature-item p {
+    margin: 0;
+
+    color: #3a3a3a;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1200px) {
+    .semen-hero-card {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .semen-hero-content {
+        padding-top: 0;
+    }
+
+    .semen-hero-main-image-wrapper {
+        height: 560px;
+    }
+}
+
+@media (max-width: 768px) {
+    .semen-hero-section {
+        padding:
+            20px 0 28px;
+    }
+
+    .semen-hero-main-image-wrapper {
+        height: 340px;
+    }
+
+    .semen-hero-title {
+        font-size: 42px;
+    }
+
+    .semen-hero-description {
+        font-size: 15px;
+    }
+
+    .semen-hero-actions {
+        grid-template-columns: 1fr;
+        gap: 11px;
+    }
+
+    .semen-hero-primary-btn,
+    .semen-hero-secondary-btn {
+        min-height: 58px;
+
+        font-size: 14px;
+    }
+
+    .semen-hero-feature-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 0;
+    }
+
+    .semen-hero-feature-item:nth-child(2) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .semen-breadcrumb {
+        margin-bottom: 16px;
+        font-size: 13px;
+    }
+
+    .semen-hero-main-image-wrapper {
+        height: 270px;
+    }
+
+    .semen-hero-chevron {
+        width: 82px;
+    }
+
+    .semen-hero-chevron-top,
+    .semen-hero-chevron-bottom {
+        left: 14px;
+        width: 20px;
+    }
+
+    .semen-hero-title {
+        font-size: 34px;
+        letter-spacing: -1.4px;
+    }
+
+    .semen-hero-brand-pill {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .semen-hero-note {
+        align-items: flex-start;
+    }
+
+    .semen-hero-feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .semen-hero-feature-item {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 12px;
+
+        padding: 10px 0;
+
+        text-align: left;
+    }
+
+    .semen-hero-feature-item:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    .semen-hero-feature-icon {
+        flex: 0 0 auto;
+        margin-bottom: 0;
+    }
+}

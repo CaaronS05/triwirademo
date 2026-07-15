@@ -1,0 +1,83 @@
+/* ==========================================================
+   PEREKAT & PLASTER — PAGE FOUNDATION
+========================================================== */
+
+:root {
+    --perekat-red: #ef0000;
+    --perekat-red-dark: #d70000;
+    --perekat-black: #090909;
+    --perekat-text: #383838;
+    --perekat-muted: #676767;
+    --perekat-border: #d9d9d9;
+    --perekat-surface: #ffffff;
+    --perekat-soft-surface: #f7f7f6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.perekat-plaster-page {
+    min-width: 320px;
+    margin: 0;
+
+    background-color: #ffffff;
+    color: var(--perekat-black);
+
+    font-family:
+        "Plus Jakarta Sans",
+        Arial,
+        sans-serif;
+}
+
+.perekat-plaster-page *,
+.perekat-plaster-page *::before,
+.perekat-plaster-page *::after {
+    box-sizing: border-box;
+}
+
+.perekat-plaster-page a {
+    text-decoration: none;
+}
+
+.perekat-plaster-page svg {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.perekat-plaster-page img {
+    max-width: 100%;
+}
+
+.perekat-page-container {
+    width: min(calc(100% - (var(--container-padding) * 2)),
+            1540px);
+    margin-inline: auto;
+}
+
+.perekat-plaster-main {
+    width: 100%;
+}
+
+.perekat-plaster-include {
+    width: 100%;
+}
+
+@media (max-width: 1100px) {
+    .perekat-page-container {
+        width: min(100% - 56px, 1540px);
+    }
+}
+
+@media (max-width: 680px) {
+    .perekat-page-container {
+        width: min(100% - 32px, 1540px);
+    }
+}
+
+@media (max-width: 390px) {
+    .perekat-page-container {
+        width: min(100% - 24px, 1540px);
+    }
+}

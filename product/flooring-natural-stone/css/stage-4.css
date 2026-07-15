@@ -1,0 +1,643 @@
+/* ==========================================================
+   STAGE 4 — KOLEKSI PILIHAN
+========================================================== */
+
+.flooring-collections-section {
+    width: 100%;
+    padding:
+        clamp(60px, 6vw, 88px) 0 clamp(68px, 7vw, 100px);
+
+    background-color: #ffffff;
+    border-top: 1px solid #e2e2e2;
+}
+
+
+/* ==========================================================
+   SECTION HEADER
+========================================================== */
+
+.flooring-collections-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.flooring-collections-eyebrow {
+    margin: 0 0 9px;
+
+    color: var(--flooring-red);
+
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.flooring-collections-title {
+    margin: 0;
+
+    color: var(--flooring-black);
+
+    font-size: clamp(31px, 2.9vw, 43px);
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: 0;
+}
+
+.flooring-collections-intro {
+    max-width: 550px;
+    margin: 0;
+
+    color: var(--flooring-text);
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.7;
+    text-align: right;
+}
+
+
+/* ==========================================================
+   CATEGORY GROUPS
+========================================================== */
+
+.flooring-collections-groups {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: clamp(24px, 2vw, 32px);
+
+    width: 100%;
+}
+
+.flooring-collection-group {
+    display: grid;
+    grid-template-rows: 20px minmax(0, 1fr);
+    row-gap: 16px;
+
+    min-width: 0;
+
+    scroll-margin-top: 120px;
+}
+
+.flooring-collection-group-header {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+
+    width: 100%;
+    min-height: 20px;
+    margin: 0;
+}
+
+.flooring-collection-group-title {
+    flex: 0 0 auto;
+
+    margin: 0;
+
+    color: #1b1c20;
+
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.flooring-collection-group-line {
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #d8d8d8;
+}
+
+
+/* ==========================================================
+   ITEM GRID
+========================================================== */
+
+.flooring-collection-items {
+    display: grid;
+    grid-auto-rows: 1fr;
+    align-items: stretch;
+    gap: 12px;
+
+    min-width: 0;
+}
+
+.flooring-collection-group-marble .flooring-collection-items,
+.flooring-collection-group-granite .flooring-collection-items,
+.flooring-collection-group-stone .flooring-collection-items {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+
+/* ==========================================================
+   COLLECTION CARD
+========================================================== */
+
+.flooring-collection-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 268px;
+    height: 100%;
+
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    transition:
+        border-color 200ms ease,
+        box-shadow 200ms ease,
+        transform 200ms ease;
+}
+
+.flooring-collection-card:hover {
+    border-color: rgba(230, 0, 18, 0.42);
+    box-shadow: 0 13px 29px rgba(0, 0, 0, 0.08);
+
+    transform: translateY(-4px);
+}
+
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.flooring-collection-media {
+    flex: 0 0 142px;
+
+    width: 100%;
+    height: 142px;
+
+    background-color: #eeeeee;
+
+    overflow: hidden;
+}
+
+.flooring-collection-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 550ms ease;
+}
+
+.flooring-collection-card:hover .flooring-collection-image {
+    transform: scale(1.055);
+}
+
+
+/* ==========================================================
+   CARD CONTENT
+========================================================== */
+
+.flooring-collection-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+
+    min-width: 0;
+    min-height: 124px;
+    padding: 12px;
+}
+
+.flooring-collection-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    margin: 0;
+
+    color: #1b1c20;
+
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.45;
+    text-align: center;
+}
+
+.flooring-collection-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 44px;
+    margin-top: 12px;
+    padding: 8px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--flooring-red);
+    border-radius: 3px;
+
+    color: var(--flooring-red);
+
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: center;
+
+    transition:
+        background-color 170ms ease,
+        color 170ms ease,
+        transform 170ms ease;
+}
+
+.flooring-collection-button:hover {
+    background-color: var(--flooring-red);
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+.flooring-collection-button:focus-visible {
+    outline: 2px solid var(--flooring-red);
+    outline-offset: 2px;
+}
+
+
+/* ==========================================================
+   NOTICE
+========================================================== */
+
+.flooring-collections-notice {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 25px;
+
+    width: 100%;
+    min-height: 55px;
+    margin-top: 19px;
+    padding:
+        10px 15px;
+
+    background-color: #ffffff;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+}
+
+.flooring-collections-notice-copy {
+    display: grid;
+    grid-template-columns:
+        24px minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+
+    min-width: 0;
+
+    color: #55575d;
+}
+
+.flooring-collections-notice-copy svg {
+    width: 23px;
+    height: 23px;
+
+    color: #26272b;
+}
+
+.flooring-collections-notice-copy p {
+    margin: 0;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+.flooring-collections-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 13px;
+
+    min-height: 35px;
+    padding:
+        6px 4px 6px 18px;
+
+    color: var(--flooring-red);
+
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+
+    transition:
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+.flooring-collections-whatsapp svg {
+    flex: 0 0 auto;
+
+    width: 20px;
+    height: 20px;
+
+    transition: transform 180ms ease;
+}
+
+.flooring-collections-whatsapp:hover {
+    color: var(--flooring-red-dark);
+
+    transform: translateX(2px);
+}
+
+.flooring-collections-whatsapp:hover svg {
+    transform: translateX(4px);
+}
+
+
+/* ==========================================================
+   LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1600px) {
+    .flooring-collection-card {
+        min-height: 294px;
+    }
+
+    .flooring-collection-media {
+        flex-basis: 165px;
+        height: 165px;
+    }
+
+    .flooring-collection-name {
+        font-size: 11px;
+    }
+
+    .flooring-collection-button {
+        min-height: 44px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* ==========================================================
+   LARGE LAPTOP
+========================================================== */
+
+@media (max-width: 1380px) {
+    .flooring-collections-groups {
+        gap: 24px;
+    }
+
+    .flooring-collection-items {
+        gap: 10px;
+    }
+
+    .flooring-collection-card {
+        min-height: 254px;
+    }
+
+    .flooring-collection-media {
+        flex-basis: 128px;
+        height: 128px;
+    }
+
+    .flooring-collection-content {
+        min-height: 124px;
+        padding: 12px 10px 10px;
+    }
+
+    .flooring-collection-name {
+        font-size: 9px;
+    }
+
+    .flooring-collection-button {
+        min-height: 44px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1100px) {
+    .flooring-collections-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .flooring-collections-intro {
+        max-width: 700px;
+
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .flooring-collections-groups {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .flooring-collection-group-marble .flooring-collection-items,
+    .flooring-collection-group-granite .flooring-collection-items,
+    .flooring-collection-group-stone .flooring-collection-items {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .flooring-collection-items {
+        gap: 16px;
+    }
+
+    .flooring-collection-card {
+        min-height: 330px;
+    }
+
+    .flooring-collection-media {
+        flex-basis: 190px;
+        height: 190px;
+    }
+
+    .flooring-collection-content {
+        min-height: 138px;
+        padding: 14px;
+    }
+
+    .flooring-collection-name {
+        font-size: 11px;
+    }
+
+    .flooring-collection-button {
+        min-height: 44px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 760px) {
+    .flooring-collections-section {
+        padding:
+            58px 0 76px;
+    }
+
+    .flooring-collections-title {
+        font-size: 38px;
+        letter-spacing: 0;
+    }
+
+    .flooring-collection-group-marble .flooring-collection-items,
+    .flooring-collection-group-granite .flooring-collection-items,
+    .flooring-collection-group-stone .flooring-collection-items {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .flooring-collection-media {
+        flex-basis: 180px;
+        height: 180px;
+    }
+
+    .flooring-collections-notice {
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+
+    .flooring-collections-whatsapp {
+        justify-content: flex-start;
+
+        padding-left: 33px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 560px) {
+    .flooring-collections-section {
+        padding:
+            49px 0 64px;
+    }
+
+    .flooring-collections-header {
+        margin-bottom: 24px;
+    }
+
+    .flooring-collections-title {
+        font-size: 32px;
+        line-height: 1.18;
+        letter-spacing: 0;
+    }
+
+    .flooring-collections-intro {
+        font-size: 12px;
+    }
+
+    .flooring-collections-groups {
+        gap: 31px;
+    }
+
+    .flooring-collection-group-marble .flooring-collection-items,
+    .flooring-collection-group-granite .flooring-collection-items,
+    .flooring-collection-group-stone .flooring-collection-items {
+        display: flex;
+        gap: 12px;
+
+        padding:
+            2px 2px 17px;
+
+        overflow-x: auto;
+
+        scroll-snap-type: x mandatory;
+    }
+
+    .flooring-collection-card {
+        flex: 0 0 175px;
+        min-height: 306px;
+
+        scroll-snap-align: start;
+    }
+
+    .flooring-collection-media {
+        flex-basis: 160px;
+        height: 160px;
+    }
+
+    .flooring-collection-name {
+        font-size: 10px;
+    }
+
+    .flooring-collections-notice {
+        padding:
+            13px 14px;
+    }
+
+    .flooring-collections-notice-copy {
+        align-items: flex-start;
+    }
+
+    .flooring-collections-notice-copy p {
+        font-size: 10px;
+    }
+
+    .flooring-collections-whatsapp {
+        padding-left: 34px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 390px) {
+    .flooring-collections-title {
+        font-size: 29px;
+    }
+
+    .flooring-collection-card {
+        flex-basis: 160px;
+        min-height: 286px;
+    }
+
+    .flooring-collection-media {
+        flex-basis: 145px;
+        height: 145px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flooring-collection-card,
+    .flooring-collection-image,
+    .flooring-collection-button {
+        transition: none;
+    }
+
+    .flooring-collection-card:hover,
+    .flooring-collection-card:hover .flooring-collection-image,
+    .flooring-collection-button:hover {
+        transform: none;
+    }
+}

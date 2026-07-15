@@ -1,0 +1,415 @@
+/* ==========================================================
+   STAGE 5 — TEMUKAN MATERIAL YANG SESUAI
+========================================================== */
+
+.flooring-guide-section {
+    width: 100%;
+    padding:
+        clamp(55px, 5.5vw, 80px) 0 clamp(60px, 6vw, 88px);
+
+    background-color: #ffffff;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.flooring-guide-header {
+    width: 100%;
+    margin-bottom: 23px;
+}
+
+.flooring-guide-title {
+    margin: 0;
+
+    color: var(--flooring-black);
+
+    font-size: clamp(29px, 2.5vw, 39px);
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -1.35px;
+}
+
+
+/* ==========================================================
+   GUIDE GRID
+========================================================== */
+
+.flooring-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(14px, 1.4vw, 21px);
+
+    width: 100%;
+}
+
+
+/* ==========================================================
+   GUIDE CARD
+========================================================== */
+
+.flooring-guide-card {
+    position: relative;
+
+    display: grid;
+    grid-template-columns:
+        82px minmax(0, 1fr);
+    align-items: center;
+    gap: 20px;
+
+    min-width: 0;
+    min-height: 142px;
+    padding:
+        23px 22px;
+
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    transition:
+        border-color 200ms ease,
+        box-shadow 200ms ease,
+        transform 200ms ease;
+}
+
+.flooring-guide-card::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 3px;
+
+    background-color: var(--flooring-red);
+
+    content: "";
+
+    opacity: 0;
+
+    transform: scaleY(0);
+    transform-origin: center;
+
+    transition:
+        opacity 200ms ease,
+        transform 200ms ease;
+}
+
+.flooring-guide-card:hover {
+    border-color: rgba(230, 0, 18, 0.42);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.07);
+
+    transform: translateY(-4px);
+}
+
+.flooring-guide-card:hover::before {
+    opacity: 1;
+
+    transform: scaleY(1);
+}
+
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+.flooring-guide-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 82px;
+    height: 82px;
+
+    color: #17181c;
+
+    transition: transform 200ms ease;
+}
+
+.flooring-guide-icon svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+.flooring-guide-card:hover .flooring-guide-icon {
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.flooring-guide-content {
+    min-width: 0;
+}
+
+.flooring-guide-card-title {
+    margin: 0;
+
+    color: #1d1e22;
+
+    font-size: clamp(14px, 1.05vw, 17px);
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.25px;
+}
+
+.flooring-guide-description {
+    margin: 8px 0 0;
+
+    color: #5a5c62;
+
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+
+/* ==========================================================
+   NOTICE
+========================================================== */
+
+.flooring-guide-notice {
+    display: grid;
+    grid-template-columns:
+        24px minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    min-height: 50px;
+    margin-top: 17px;
+    padding:
+        11px 15px;
+
+    background-color: #fafafa;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+
+    color: #55575d;
+}
+
+.flooring-guide-notice svg {
+    width: 23px;
+    height: 23px;
+
+    color: #28292d;
+}
+
+.flooring-guide-notice p {
+    margin: 0;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   LARGE LAPTOP
+========================================================== */
+
+@media (max-width: 1380px) {
+    .flooring-guide-grid {
+        gap: 12px;
+    }
+
+    .flooring-guide-card {
+        grid-template-columns:
+            66px minmax(0, 1fr);
+        gap: 15px;
+
+        min-height: 125px;
+        padding:
+            19px 16px;
+    }
+
+    .flooring-guide-icon {
+        width: 66px;
+        height: 66px;
+    }
+
+    .flooring-guide-card-title {
+        font-size: 13px;
+    }
+
+    .flooring-guide-description {
+        font-size: 9px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1080px) {
+    .flooring-guide-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 17px;
+    }
+
+    .flooring-guide-card {
+        grid-template-columns:
+            82px minmax(0, 1fr);
+        gap: 20px;
+
+        min-height: 145px;
+        padding:
+            23px 22px;
+    }
+
+    .flooring-guide-icon {
+        width: 82px;
+        height: 82px;
+    }
+
+    .flooring-guide-card-title {
+        font-size: 17px;
+    }
+
+    .flooring-guide-description {
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 760px) {
+    .flooring-guide-section {
+        padding:
+            55px 0 72px;
+    }
+
+    .flooring-guide-title {
+        font-size: 37px;
+        letter-spacing: -1.2px;
+    }
+
+    .flooring-guide-card {
+        grid-template-columns:
+            70px minmax(0, 1fr);
+        gap: 16px;
+
+        min-height: 130px;
+        padding:
+            19px 17px;
+    }
+
+    .flooring-guide-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .flooring-guide-card-title {
+        font-size: 15px;
+    }
+
+    .flooring-guide-description {
+        font-size: 11px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 560px) {
+    .flooring-guide-section {
+        padding:
+            48px 0 63px;
+    }
+
+    .flooring-guide-header {
+        margin-bottom: 21px;
+    }
+
+    .flooring-guide-title {
+        font-size: 31px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    .flooring-guide-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .flooring-guide-card {
+        grid-template-columns:
+            72px minmax(0, 1fr);
+        gap: 17px;
+
+        min-height: 116px;
+        padding:
+            17px 16px;
+    }
+
+    .flooring-guide-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .flooring-guide-card-title {
+        font-size: 15px;
+    }
+
+    .flooring-guide-description {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .flooring-guide-notice {
+        align-items: flex-start;
+
+        margin-top: 15px;
+        padding:
+            12px 14px;
+    }
+
+    .flooring-guide-notice p {
+        font-size: 10px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 390px) {
+    .flooring-guide-title {
+        font-size: 28px;
+    }
+
+    .flooring-guide-card {
+        grid-template-columns:
+            60px minmax(0, 1fr);
+        gap: 13px;
+
+        padding:
+            15px 13px;
+    }
+
+    .flooring-guide-icon {
+        width: 58px;
+        height: 58px;
+    }
+
+    .flooring-guide-card-title {
+        font-size: 13px;
+    }
+
+    .flooring-guide-description {
+        font-size: 10px;
+    }
+}

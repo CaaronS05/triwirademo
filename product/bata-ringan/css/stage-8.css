@@ -1,0 +1,444 @@
+/* ==========================================================
+   STAGE 8 — CTA KONSULTASI PRODUK
+========================================================== */
+
+.product-cta-stage-eight {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    min-height: 320px;
+    padding:
+        clamp(40px, 5vw, 60px) 0;
+
+    background-color: #0b0d0e;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   DARK TEXTURE BACKGROUND
+========================================================== */
+
+.product-cta-stage-background {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+
+    background:
+        radial-gradient(circle at 18% 25%,
+            rgba(255, 255, 255, 0.045),
+            transparent 30%),
+        radial-gradient(circle at 84% 70%,
+            rgba(255, 255, 255, 0.035),
+            transparent 34%),
+        linear-gradient(115deg,
+            rgba(255, 255, 255, 0.015) 0%,
+            rgba(0, 0, 0, 0.2) 50%,
+            rgba(255, 255, 255, 0.015) 100%),
+        #0b0d0e;
+}
+
+.product-cta-stage-background::before {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        repeating-linear-gradient(18deg,
+            transparent 0,
+            transparent 34px,
+            rgba(255, 255, 255, 0.012) 35px,
+            transparent 36px),
+        repeating-linear-gradient(-24deg,
+            transparent 0,
+            transparent 58px,
+            rgba(255, 255, 255, 0.01) 59px,
+            transparent 60px);
+
+    content: "";
+
+    opacity: 0.75;
+}
+
+
+/* ==========================================================
+   MAIN LAYOUT
+========================================================== */
+
+.product-cta-stage-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr) minmax(380px, 0.82fr);
+    align-items: center;
+    gap: clamp(90px, 10vw, 180px);
+
+    min-height: 250px;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.product-cta-stage-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 660px;
+}
+
+.product-cta-stage-title {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(44px, 4.4vw, 68px);
+    font-weight: 700;
+    line-height: 1.13;
+    letter-spacing: -2.8px;
+}
+
+.product-cta-stage-description {
+    max-width: 660px;
+    margin: 27px 0 0;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: clamp(15px, 1.15vw, 19px);
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   CTA ACTIONS
+========================================================== */
+
+.product-cta-stage-actions {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 500px;
+    justify-self: end;
+}
+
+.product-cta-stage-whatsapp,
+.product-cta-stage-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 74px;
+    padding:
+        17px 28px;
+
+    border-radius: 7px;
+
+    font-size: clamp(14px, 1.1vw, 18px);
+    font-weight: 600;
+
+    text-align: center;
+
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.product-cta-stage-whatsapp {
+    gap: 16px;
+
+    background:
+        linear-gradient(105deg,
+            #ff2a00 0%,
+            #e81900 100%);
+
+    border: 1px solid #ff2a00;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 12px 30px rgba(239, 27, 0, 0.18);
+}
+
+.product-cta-stage-whatsapp:hover {
+    background:
+        linear-gradient(105deg,
+            #e61d00 0%,
+            #c91500 100%);
+
+    border-color: #e61d00;
+
+    box-shadow:
+        0 16px 38px rgba(239, 27, 0, 0.28);
+
+    transform: translateY(-3px);
+}
+
+.product-cta-stage-whatsapp-icon {
+    flex: 0 0 auto;
+
+    width: 38px;
+    height: 38px;
+}
+
+.product-cta-stage-secondary {
+    background-color: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+
+    color: #ffffff;
+}
+
+.product-cta-stage-secondary:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+
+    color: #0b0d0e;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================================
+   RED CHEVRON
+========================================================== */
+
+.product-cta-stage-chevron {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 49%;
+    z-index: 1;
+
+    width: 180px;
+
+    pointer-events: none;
+}
+
+.product-cta-stage-chevron-top,
+.product-cta-stage-chevron-bottom {
+    position: absolute;
+    left: 54px;
+
+    width: 40px;
+    height: 58%;
+
+    background:
+        linear-gradient(180deg,
+            #f22b00 0%,
+            #df1600 100%);
+}
+
+.product-cta-stage-chevron-top {
+    top: -40px;
+
+    transform: rotate(-30deg);
+    transform-origin: bottom center;
+}
+
+.product-cta-stage-chevron-bottom {
+    bottom: -40px;
+
+    transform: rotate(30deg);
+    transform-origin: top center;
+}
+
+
+/* ==========================================================
+   LARGE LAPTOP
+========================================================== */
+
+@media (max-width: 1380px) {
+    .product-cta-stage-eight {
+        min-height: 390px;
+    }
+
+    .product-cta-stage-layout {
+        grid-template-columns:
+            minmax(0, 1fr) minmax(340px, 0.8fr);
+        gap: 100px;
+    }
+
+    .product-cta-stage-title {
+        font-size: 54px;
+    }
+
+    .product-cta-stage-description {
+        font-size: 16px;
+    }
+
+    .product-cta-stage-actions {
+        max-width: 440px;
+    }
+
+    .product-cta-stage-whatsapp,
+    .product-cta-stage-secondary {
+        min-height: 68px;
+
+        font-size: 15px;
+    }
+
+    .product-cta-stage-chevron {
+        left: 48%;
+        width: 155px;
+    }
+
+    .product-cta-stage-chevron-top,
+    .product-cta-stage-chevron-bottom {
+        left: 47px;
+
+        width: 35px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1080px) {
+    .product-cta-stage-layout {
+        grid-template-columns:
+            minmax(0, 1fr) minmax(310px, 0.75fr);
+        gap: 70px;
+    }
+
+    .product-cta-stage-title {
+        font-size: 47px;
+    }
+
+    .product-cta-stage-chevron {
+        left: 47%;
+        opacity: 0.85;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 850px) {
+    .product-cta-stage-eight {
+        min-height: 0;
+        padding:
+            75px 0;
+    }
+
+    .product-cta-stage-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .product-cta-stage-content {
+        max-width: 680px;
+    }
+
+    .product-cta-stage-title {
+        font-size: clamp(44px, 7vw, 58px);
+    }
+
+    .product-cta-stage-actions {
+        max-width: 520px;
+        justify-self: start;
+    }
+
+    .product-cta-stage-chevron {
+        top: auto;
+        right: -25px;
+        bottom: -150px;
+        left: auto;
+
+        height: 420px;
+
+        opacity: 0.3;
+
+        transform: rotate(12deg);
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 560px) {
+    .product-cta-stage-eight {
+        padding:
+            58px 0;
+    }
+
+    .product-cta-stage-layout {
+        gap: 38px;
+    }
+
+    .product-cta-stage-title {
+        font-size: 38px;
+        line-height: 1.16;
+        letter-spacing: -1.8px;
+    }
+
+    .product-cta-stage-title br {
+        display: none;
+    }
+
+    .product-cta-stage-description {
+        margin-top: 22px;
+
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .product-cta-stage-actions {
+        gap: 14px;
+    }
+
+    .product-cta-stage-whatsapp,
+    .product-cta-stage-secondary {
+        min-height: 60px;
+        padding:
+            14px 18px;
+
+        font-size: 14px;
+    }
+
+    .product-cta-stage-whatsapp-icon {
+        width: 31px;
+        height: 31px;
+    }
+
+    .product-cta-stage-chevron {
+        display: none;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 390px) {
+    .product-cta-stage-title {
+        font-size: 34px;
+    }
+
+    .product-cta-stage-whatsapp {
+        gap: 11px;
+
+        font-size: 13px;
+    }
+
+    .product-cta-stage-secondary {
+        font-size: 13px;
+    }
+}

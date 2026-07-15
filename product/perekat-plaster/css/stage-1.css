@@ -1,0 +1,727 @@
+/* ==========================================================
+   STAGE 1 — HEADER
+========================================================== */
+
+.perekat-header {
+    position: relative;
+    z-index: 100;
+
+    width: 100%;
+    min-height: 94px;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.perekat-header-layout {
+    display: grid;
+    grid-template-columns:
+        190px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 46px;
+
+    min-height: 94px;
+}
+
+.perekat-header-logo-link {
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+}
+
+.perekat-header-logo {
+    display: block;
+
+    width: 142px;
+    height: auto;
+}
+
+.perekat-header-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: clamp(28px, 3vw, 50px);
+
+    min-width: 0;
+}
+
+.perekat-header-navigation a {
+    position: relative;
+
+    padding:
+        36px 0 31px;
+
+    color: #16171b;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+
+    transition: color 180ms ease;
+}
+
+.perekat-header-navigation a::after {
+    position: absolute;
+    right: 0;
+    bottom: 22px;
+    left: 0;
+
+    height: 3px;
+
+    background-color: var(--perekat-red);
+
+    content: "";
+
+    opacity: 0;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition:
+        opacity 180ms ease,
+        transform 180ms ease;
+}
+
+.perekat-header-navigation a:hover,
+.perekat-header-navigation a.is-active {
+    color: var(--perekat-red);
+}
+
+.perekat-header-navigation a:hover::after,
+.perekat-header-navigation a.is-active::after {
+    opacity: 1;
+
+    transform: scaleX(1);
+}
+
+.perekat-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+}
+
+.perekat-header-language {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.perekat-header-language a {
+    color: #777980;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.perekat-header-language a.is-active {
+    color: #141519;
+}
+
+.perekat-header-language span {
+    color: #a6a6a6;
+}
+
+.perekat-header-sales-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 155px;
+    min-height: 52px;
+    padding:
+        13px 22px;
+
+    background-color: var(--perekat-red);
+    border: 1px solid var(--perekat-red);
+    border-radius: 4px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.perekat-header-sales-button:hover {
+    background-color: var(--perekat-red-dark);
+    border-color: var(--perekat-red-dark);
+    box-shadow: 0 10px 25px rgba(239, 0, 0, 0.2);
+
+    transform: translateY(-2px);
+}
+
+.perekat-header-menu-button {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+    padding: 9px;
+
+    background-color: #ffffff;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+}
+
+.perekat-header-menu-button span {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+    margin-block: 5px;
+
+    background-color: #111111;
+
+    transition:
+        transform 180ms ease,
+        opacity 180ms ease;
+}
+
+.perekat-header-menu-button[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.perekat-header-menu-button[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.perekat-header-menu-button[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ==========================================================
+   HERO SECTION
+========================================================== */
+
+.perekat-hero-section {
+    width: 100%;
+    padding:
+        26px 0 40px;
+
+    background-color: #ffffff;
+}
+
+.perekat-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    min-height: 28px;
+    margin-bottom: 20px;
+
+    color: #74767d;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.perekat-breadcrumb a {
+    color: inherit;
+
+    transition: color 180ms ease;
+}
+
+.perekat-breadcrumb a:hover {
+    color: var(--perekat-red);
+}
+
+.perekat-breadcrumb-current {
+    color: var(--perekat-red);
+
+    font-weight: 600;
+}
+
+.perekat-hero-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.08fr) minmax(480px, 0.92fr);
+    gap: clamp(44px, 4vw, 72px);
+
+    width: 100%;
+    padding-bottom: 26px;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+
+/* ==========================================================
+   HERO GALLERY
+========================================================== */
+
+.perekat-hero-gallery {
+    min-width: 0;
+}
+
+.perekat-hero-main-media {
+    position: relative;
+
+    width: 100%;
+    height: clamp(620px, calc(100vh - 250px), 760px);
+
+    background-color: #eeeeee;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.perekat-hero-main-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: opacity 160ms ease;
+}
+
+/* ==========================================================
+   HERO CONTENT
+========================================================== */
+
+.perekat-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    min-width: 0;
+    padding-top: 6px;
+}
+
+.perekat-hero-eyebrow {
+    margin: 0 0 8px;
+
+    color: var(--perekat-red);
+
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.35;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+}
+
+.perekat-hero-title {
+    margin: 0;
+
+    color: var(--perekat-black);
+
+    font-size: clamp(44px, 4vw, 64px);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -2px;
+}
+
+.perekat-hero-description {
+    max-width: 600px;
+    margin: 12px 0 0;
+
+    color: var(--perekat-text);
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.perekat-hero-product-data {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.perekat-hero-data-group {
+    min-width: 0;
+}
+
+.perekat-hero-label {
+    margin: 0 0 12px;
+
+    color: #444444;
+
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.perekat-hero-tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.perekat-hero-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    padding:
+        10px 18px;
+
+    background-color: #ffffff;
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+
+    color: #4a4a4a;
+
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.perekat-hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1.03fr;
+    gap: 22px;
+
+    margin-top: 28px;
+}
+
+.perekat-hero-primary-button,
+.perekat-hero-secondary-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    min-height: 64px;
+    padding: 14px 20px;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+.perekat-hero-primary-button {
+    gap: 14px;
+
+    background-color: var(--perekat-red);
+    border: 1px solid var(--perekat-red);
+
+    color: #ffffff;
+}
+
+.perekat-hero-primary-button svg,
+.perekat-hero-primary-button img {
+    flex: 0 0 auto;
+
+    width: 34px;
+    height: 34px;
+
+    filter: brightness(0) invert(1);
+}
+
+.perekat-hero-primary-label {
+    white-space: nowrap;
+}
+
+.perekat-hero-secondary-button {
+    background-color: #ffffff;
+    border: 1px solid var(--perekat-red);
+
+    color: var(--perekat-red);
+}
+
+.perekat-hero-primary-button:hover {
+    background-color: #c90000;
+    border-color: #c90000;
+
+    transform: translateY(-2px);
+}
+
+.perekat-hero-secondary-button:hover {
+    background-color: var(--perekat-red);
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+.perekat-hero-services {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    margin-top: 4px;
+    padding-top: 10px;
+}
+
+.perekat-hero-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    min-width: 0;
+    padding:
+        10px 12px 0;
+
+    text-align: center;
+}
+
+.perekat-hero-service:not(:last-child) {
+    border-right: 1px solid #e3e3e3;
+}
+
+.perekat-hero-service svg {
+    flex: 0 0 auto;
+
+    width: 42px;
+    height: 42px;
+    margin-bottom: 10px;
+
+    color: var(--perekat-black);
+}
+
+.perekat-hero-service p {
+    margin: 0;
+
+    color: var(--perekat-black);
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1380px) {
+    .perekat-header-layout {
+        gap: 34px;
+    }
+
+    .perekat-header-navigation {
+        gap: 28px;
+    }
+
+    .perekat-hero-layout {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .perekat-hero-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .perekat-hero-content {
+        padding-top: 0;
+    }
+
+    .perekat-hero-main-media {
+        height: 560px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .perekat-header-layout {
+        grid-template-columns:
+            150px minmax(0, 1fr) auto;
+        gap: 24px;
+    }
+
+    .perekat-header-logo {
+        width: 120px;
+    }
+
+    .perekat-header-navigation {
+        gap: 20px;
+    }
+
+    .perekat-header-navigation a {
+        font-size: 13px;
+    }
+
+    .perekat-header-language,
+    .perekat-header-sales-button {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .perekat-header {
+        min-height: 82px;
+    }
+
+    .perekat-header-layout {
+        display: flex;
+        justify-content: space-between;
+
+        min-height: 82px;
+    }
+
+    .perekat-header-navigation {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 120;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        padding:
+            10px 24px 18px;
+
+        background-color: #ffffff;
+        border-top: 1px solid #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity 180ms ease,
+            visibility 180ms ease,
+            transform 180ms ease;
+    }
+
+    .perekat-header-navigation.is-open {
+        opacity: 1;
+        visibility: visible;
+
+        transform: translateY(0);
+    }
+
+    .perekat-header-navigation a {
+        min-height: 48px;
+        padding:
+            17px 0;
+
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .perekat-header-navigation a::after {
+        bottom: 10px;
+    }
+
+    .perekat-header-menu-button {
+        display: block;
+    }
+
+    .perekat-hero-title {
+        font-size: clamp(42px, 8vw, 58px);
+    }
+}
+
+@media (max-width: 620px) {
+    .perekat-hero-section {
+        padding:
+            20px 0 28px;
+    }
+
+    .perekat-breadcrumb {
+        margin-bottom: 18px;
+    }
+
+    .perekat-hero-main-media {
+        height: 340px;
+    }
+
+    .perekat-hero-title {
+        font-size: clamp(37px, 11vw, 48px);
+        line-height: 1.1;
+        letter-spacing: -1.8px;
+    }
+
+    .perekat-hero-description {
+        margin-top: 18px;
+
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .perekat-hero-product-data {
+        gap: 12px;
+    }
+
+    .perekat-hero-actions {
+        grid-template-columns: 1fr;
+        gap: 11px;
+    }
+
+    .perekat-hero-primary-button,
+    .perekat-hero-secondary-button {
+        min-height: 58px;
+
+        font-size: 14px;
+    }
+
+    .perekat-hero-services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 0;
+    }
+
+    .perekat-hero-service:nth-child(2) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .perekat-header-logo {
+        width: 108px;
+    }
+
+    .perekat-hero-services {
+        grid-template-columns: 1fr;
+    }
+
+    .perekat-hero-main-media {
+        height: 270px;
+    }
+
+    .perekat-hero-tag {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .perekat-hero-service {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 12px;
+
+        padding: 10px 0;
+
+        text-align: left;
+    }
+
+    .perekat-hero-service:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    .perekat-hero-service svg {
+        flex: 0 0 auto;
+        margin-bottom: 0;
+    }
+}

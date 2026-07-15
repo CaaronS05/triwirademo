@@ -1,0 +1,403 @@
+/* ==========================================================
+   GLOBAL BASE
+========================================================== */
+
+html {
+    scroll-padding-top: var(--header-height);
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+
+    background-color: var(--color-background);
+    color: var(--color-black);
+
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: var(--font-regular);
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+main {
+    display: block;
+    width: 100%;
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+/* ==========================================================
+   TYPOGRAPHY
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-black);
+    font-weight: var(--font-bold);
+    line-height: 1.15;
+}
+
+p {
+    color: var(--color-text-gray);
+    line-height: 1.7;
+}
+
+strong {
+    font-weight: var(--font-bold);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-black {
+    color: var(--color-black);
+}
+
+.text-gray {
+    color: var(--color-text-gray);
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.container {
+    width: min(
+        calc(100% - (var(--container-padding) * 2)),
+        var(--container-width)
+    );
+
+    margin-inline: auto;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-inline: var(--container-padding);
+}
+
+
+/* ==========================================================
+   SECTION BASE
+========================================================== */
+
+.section {
+    position: relative;
+    width: 100%;
+}
+
+.section-padding {
+    padding-block: 100px;
+}
+
+.section-eyebrow {
+    margin-bottom: 18px;
+
+    color: var(--color-primary);
+
+    font-size: 14px;
+    font-weight: var(--font-extrabold);
+    line-height: 1.4;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    color: var(--color-black);
+
+    font-size: clamp(38px, 4vw, 64px);
+    font-weight: var(--font-bold);
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.section-description {
+    max-width: 680px;
+    margin-top: 24px;
+
+    color: var(--color-text-gray);
+
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   GENERAL BUTTONS
+========================================================== */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+
+    min-height: 56px;
+    padding: 14px 28px;
+
+    border: 1px solid transparent;
+    border-radius: var(--radius-small);
+
+    font-size: 15px;
+    font-weight: var(--font-bold);
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+
+    color: var(--color-white);
+}
+
+.button-primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.button-outline {
+    background-color: transparent;
+    border-color: var(--color-black);
+
+    color: var(--color-black);
+}
+
+.button-outline:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.button svg {
+    flex-shrink: 0;
+
+    width: 21px;
+    height: 21px;
+}
+
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--color-primary);
+
+    font-size: 14px;
+    font-weight: var(--font-bold);
+
+    transition:
+        color var(--transition-fast),
+        gap var(--transition-fast);
+}
+
+.text-link:hover {
+    gap: 15px;
+    color: var(--color-primary-dark);
+}
+
+
+/* ==========================================================
+   IMAGE PLACEHOLDER
+========================================================== */
+
+.image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 300px;
+
+    background-color: var(--color-background-soft);
+    border: 1px solid var(--color-border-light);
+
+    color: var(--color-steel-gray);
+
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/* ==========================================================
+   HTML SECTION INCLUDE
+========================================================== */
+
+.section-include {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+.section-include[aria-busy="true"] {
+    min-height: 120px;
+}
+
+.section-loaded {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+.section-loaded > section,
+.section-loaded > footer,
+.section-loaded > header {
+    margin: 0;
+}
+
+.section-load-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 180px;
+    padding: 32px;
+
+    background-color: var(--color-background-soft);
+    border: 1px solid var(--color-border);
+
+    text-align: center;
+}
+
+.section-load-error p {
+    margin: 0 0 6px;
+
+    color: var(--color-primary);
+
+    font-weight: var(--font-bold);
+}
+
+.section-load-error small {
+    color: var(--color-text-gray);
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   NOSCRIPT MESSAGE
+========================================================== */
+
+.noscript-message {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    z-index: var(--z-overlay);
+
+    max-width: 720px;
+    margin-inline: auto;
+    padding: 18px 22px;
+
+    background-color: var(--color-primary);
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow-medium);
+
+    color: var(--color-white);
+
+    font-size: 14px;
+    font-weight: var(--font-semibold);
+    text-align: center;
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-background-soft);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-steel-gray);
+    border: 2px solid var(--color-background-soft);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-primary);
+}
+
+
+/* ==========================================================
+   RESPONSIVE GLOBAL
+========================================================== */
+
+@media (max-width: 1024px) {
+    .section-padding {
+        padding-block: 80px;
+    }
+
+    .section-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .section-padding {
+        padding-block: 64px;
+    }
+
+    .section-eyebrow {
+        margin-bottom: 14px;
+
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .section-title {
+        font-size: clamp(34px, 10vw, 46px);
+        letter-spacing: -1.5px;
+    }
+
+    .section-description {
+        margin-top: 20px;
+
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .button {
+        width: 100%;
+        min-height: 54px;
+    }
+}

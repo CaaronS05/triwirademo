@@ -1,0 +1,604 @@
+/* ==========================================================
+   STAGE 8 — CARA MEMESAN FLOORING & NATURAL STONE
+========================================================== */
+
+.flooring-order-section {
+    width: 100%;
+    padding:
+        clamp(57px, 5.8vw, 84px) 0 clamp(66px, 6.8vw, 98px);
+
+    background-color: #ffffff;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.flooring-order-header {
+    width: 100%;
+    max-width: 760px;
+    margin-bottom: 34px;
+}
+
+.flooring-order-eyebrow {
+    margin: 0 0 9px;
+
+    color: var(--flooring-red);
+
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.flooring-order-title {
+    margin: 0;
+
+    color: var(--flooring-black);
+
+    font-size: clamp(30px, 2.7vw, 41px);
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: -1.4px;
+}
+
+.flooring-order-subtitle {
+    max-width: 670px;
+    margin: 13px 0 0;
+
+    color: var(--flooring-text);
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   PROCESS
+========================================================== */
+
+.flooring-order-process {
+    display: grid;
+    grid-template-columns:
+        minmax(145px, 1fr) minmax(35px, 0.25fr) minmax(145px, 1fr) minmax(35px, 0.25fr) minmax(145px, 1fr) minmax(35px, 0.25fr) minmax(145px, 1fr) minmax(35px, 0.25fr) minmax(145px, 1fr);
+    align-items: center;
+
+    width: 100%;
+}
+
+
+/* ==========================================================
+   STEP CARD
+========================================================== */
+
+.flooring-order-step {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 295px;
+    padding:
+        24px 20px 22px;
+
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    transition:
+        border-color 200ms ease,
+        box-shadow 200ms ease,
+        transform 200ms ease;
+}
+
+.flooring-order-step::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 3px;
+
+    background-color: var(--flooring-red);
+
+    content: "";
+
+    opacity: 0;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition:
+        opacity 200ms ease,
+        transform 200ms ease;
+}
+
+.flooring-order-step:hover {
+    border-color: rgba(230, 0, 18, 0.42);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.07);
+
+    transform: translateY(-5px);
+}
+
+.flooring-order-step:hover::before {
+    opacity: 1;
+
+    transform: scaleX(1);
+}
+
+
+/* ==========================================================
+   STEP TOP
+========================================================== */
+
+.flooring-order-step-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+
+    width: 100%;
+}
+
+.flooring-order-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    width: 39px;
+    height: 39px;
+
+    background-color: #ffffff;
+    border: 1.5px solid var(--flooring-red);
+    border-radius: 50%;
+
+    color: var(--flooring-red);
+
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.flooring-order-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    width: 76px;
+    height: 76px;
+
+    color: #17181c;
+
+    transition: transform 200ms ease;
+}
+
+.flooring-order-icon svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+.flooring-order-step:hover .flooring-order-icon {
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================================
+   STEP CONTENT
+========================================================== */
+
+.flooring-order-content {
+    margin-top: auto;
+    padding-top: 27px;
+}
+
+.flooring-order-step-title {
+    margin: 0;
+
+    color: #1c1d21;
+
+    font-size: clamp(14px, 1.05vw, 17px);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.25px;
+}
+
+.flooring-order-description {
+    margin: 9px 0 0;
+
+    color: #5b5d63;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+
+/* ==========================================================
+   CONNECTOR
+========================================================== */
+
+.flooring-order-connector {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding-inline: 4px;
+
+    color: var(--flooring-red);
+}
+
+.flooring-order-connector span {
+    display: block;
+    flex: 1;
+
+    height: 1px;
+
+    background-color: #d5d5d5;
+}
+
+.flooring-order-connector svg {
+    flex: 0 0 auto;
+
+    width: 18px;
+    height: 18px;
+    margin-left: -2px;
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.flooring-order-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+
+    width: 100%;
+    margin-top: 20px;
+    padding:
+        14px 16px;
+
+    background-color: #fafafa;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+}
+
+.flooring-order-note {
+    margin: 0;
+
+    color: #61636a;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.flooring-order-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex: 0 0 auto;
+
+    min-width: 220px;
+    min-height: 44px;
+    padding:
+        10px 16px;
+
+    background-color: var(--flooring-red);
+    border: 1px solid var(--flooring-red);
+    border-radius: 4px;
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.flooring-order-button svg {
+    flex: 0 0 auto;
+
+    width: 19px;
+    height: 19px;
+
+    transition: transform 180ms ease;
+}
+
+.flooring-order-button:hover {
+    background-color: var(--flooring-red-dark);
+    border-color: var(--flooring-red-dark);
+    box-shadow: 0 11px 25px rgba(230, 0, 18, 0.2);
+
+    transform: translateY(-2px);
+}
+
+.flooring-order-button:hover svg {
+    transform: translateX(4px);
+}
+
+
+/* ==========================================================
+   LARGE LAPTOP
+========================================================== */
+
+@media (max-width: 1380px) {
+    .flooring-order-process {
+        grid-template-columns:
+            minmax(130px, 1fr) 25px minmax(130px, 1fr) 25px minmax(130px, 1fr) 25px minmax(130px, 1fr) 25px minmax(130px, 1fr);
+    }
+
+    .flooring-order-step {
+        min-height: 265px;
+        padding:
+            20px 16px 18px;
+    }
+
+    .flooring-order-number {
+        width: 35px;
+        height: 35px;
+
+        font-size: 10px;
+    }
+
+    .flooring-order-icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .flooring-order-content {
+        padding-top: 22px;
+    }
+
+    .flooring-order-step-title {
+        font-size: 13px;
+    }
+
+    .flooring-order-description {
+        font-size: 9px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1080px) {
+    .flooring-order-process {
+        grid-template-columns: repeat(5, minmax(220px, 1fr));
+        gap: 15px;
+
+        padding:
+            3px 3px 20px;
+
+        overflow-x: auto;
+
+        scroll-snap-type: x mandatory;
+    }
+
+    .flooring-order-step {
+        min-height: 290px;
+
+        scroll-snap-align: start;
+    }
+
+    .flooring-order-connector {
+        display: none;
+    }
+
+    .flooring-order-icon {
+        width: 78px;
+        height: 78px;
+    }
+
+    .flooring-order-step-title {
+        font-size: 17px;
+    }
+
+    .flooring-order-description {
+        font-size: 11px;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 760px) {
+    .flooring-order-section {
+        padding:
+            55px 0 72px;
+    }
+
+    .flooring-order-title {
+        font-size: 37px;
+        letter-spacing: -1.2px;
+    }
+
+    .flooring-order-subtitle {
+        font-size: 12px;
+    }
+
+    .flooring-order-process {
+        grid-template-columns: repeat(5, 210px);
+    }
+
+    .flooring-order-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .flooring-order-button {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 560px) {
+    .flooring-order-section {
+        padding:
+            48px 0 63px;
+    }
+
+    .flooring-order-header {
+        margin-bottom: 23px;
+    }
+
+    .flooring-order-title {
+        font-size: 31px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    .flooring-order-process {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        padding: 0;
+
+        overflow: visible;
+    }
+
+    .flooring-order-step {
+        display: grid;
+        grid-template-columns:
+            101px minmax(0, 1fr);
+        align-items: center;
+        gap: 17px;
+
+        width: 100%;
+        min-height: 130px;
+        padding:
+            16px 17px;
+
+        scroll-snap-align: none;
+    }
+
+    .flooring-order-step-top {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 101px;
+        height: 96px;
+    }
+
+    .flooring-order-number {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 32px;
+        height: 32px;
+
+        background-color: #ffffff;
+
+        font-size: 9px;
+    }
+
+    .flooring-order-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .flooring-order-content {
+        margin: 0;
+        padding: 0;
+    }
+
+    .flooring-order-step-title {
+        font-size: 16px;
+    }
+
+    .flooring-order-description {
+        margin-top: 7px;
+
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .flooring-order-footer {
+        margin-top: 16px;
+        padding:
+            13px 14px;
+    }
+
+    .flooring-order-note {
+        font-size: 10px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 390px) {
+    .flooring-order-title {
+        font-size: 28px;
+    }
+
+    .flooring-order-step {
+        grid-template-columns:
+            82px minmax(0, 1fr);
+        gap: 13px;
+
+        min-height: 116px;
+        padding:
+            14px 13px;
+    }
+
+    .flooring-order-step-top {
+        width: 82px;
+        height: 82px;
+    }
+
+    .flooring-order-icon {
+        width: 59px;
+        height: 59px;
+    }
+
+    .flooring-order-number {
+        width: 29px;
+        height: 29px;
+
+        font-size: 8px;
+    }
+
+    .flooring-order-step-title {
+        font-size: 14px;
+    }
+
+    .flooring-order-description {
+        font-size: 10px;
+    }
+}

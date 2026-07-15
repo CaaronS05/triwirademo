@@ -1,0 +1,455 @@
+/* ==========================================================
+   STAGE 8 — CTA PEREKAT & PLASTER
+========================================================== */
+
+.perekat-cta-section {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    min-height: 270px;
+    padding:
+        clamp(52px, 5vw, 76px) 0;
+
+    background-color: #090b0c;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   DARK BACKGROUND
+========================================================== */
+
+.perekat-cta-background {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+
+    background:
+        radial-gradient(circle at 16% 24%,
+            rgba(255, 255, 255, 0.05),
+            transparent 31%),
+        radial-gradient(circle at 84% 70%,
+            rgba(255, 255, 255, 0.035),
+            transparent 35%),
+        linear-gradient(115deg,
+            rgba(255, 255, 255, 0.015) 0%,
+            rgba(0, 0, 0, 0.25) 50%,
+            rgba(255, 255, 255, 0.012) 100%),
+        #090b0c;
+}
+
+.perekat-cta-background::before {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        repeating-linear-gradient(18deg,
+            transparent 0,
+            transparent 32px,
+            rgba(255, 255, 255, 0.014) 33px,
+            transparent 34px),
+        repeating-linear-gradient(-26deg,
+            transparent 0,
+            transparent 57px,
+            rgba(255, 255, 255, 0.011) 58px,
+            transparent 59px);
+
+    content: "";
+
+    opacity: 0.8;
+}
+
+.perekat-cta-background::after {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.08),
+            transparent 48%,
+            rgba(0, 0, 0, 0.1));
+
+    content: "";
+}
+
+
+/* ==========================================================
+   LAYOUT
+========================================================== */
+
+.perekat-cta-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr) minmax(350px, 0.7fr);
+    align-items: center;
+    gap: clamp(90px, 10vw, 170px);
+
+    width: 100%;
+    min-height: 160px;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.perekat-cta-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 720px;
+}
+
+.perekat-cta-title {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(36px, 3.5vw, 53px);
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: -2px;
+}
+
+.perekat-cta-description {
+    max-width: 690px;
+    margin: 18px 0 0;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: clamp(13px, 1vw, 16px);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   ACTIONS
+========================================================== */
+
+.perekat-cta-actions {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    width: 100%;
+    max-width: 420px;
+
+    justify-self: end;
+}
+
+.perekat-cta-whatsapp,
+.perekat-cta-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 59px;
+    padding:
+        14px 22px;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.perekat-cta-whatsapp {
+    gap: 13px;
+
+    background:
+        linear-gradient(105deg,
+            #ff2700 0%,
+            #e71900 100%);
+
+    border: 1px solid #ff2700;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 12px 28px rgba(239, 25, 0, 0.18);
+}
+
+.perekat-cta-whatsapp:hover {
+    background:
+        linear-gradient(105deg,
+            #e81f00 0%,
+            #ca1400 100%);
+
+    border-color: #e81f00;
+
+    box-shadow:
+        0 16px 36px rgba(239, 25, 0, 0.27);
+
+    transform: translateY(-3px);
+}
+
+.perekat-cta-whatsapp-icon {
+    flex: 0 0 auto;
+
+    width: 30px;
+    height: 30px;
+}
+
+.perekat-cta-secondary {
+    background-color: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.82);
+
+    color: #ffffff;
+}
+
+.perekat-cta-secondary:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+
+    color: #0b0d0e;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================================
+   RED CHEVRON
+========================================================== */
+
+.perekat-cta-chevron {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 54%;
+    z-index: 1;
+
+    width: 130px;
+
+    pointer-events: none;
+}
+
+.perekat-cta-chevron-top,
+.perekat-cta-chevron-bottom {
+    position: absolute;
+    left: 36px;
+
+    width: 30px;
+    height: 61%;
+
+    background:
+        linear-gradient(180deg,
+            #f52a00 0%,
+            #dc1500 100%);
+}
+
+.perekat-cta-chevron-top {
+    top: -32px;
+
+    transform: rotate(-34deg);
+    transform-origin: bottom center;
+}
+
+.perekat-cta-chevron-bottom {
+    bottom: -32px;
+
+    transform: rotate(34deg);
+    transform-origin: top center;
+}
+
+
+/* ==========================================================
+   LARGE LAPTOP
+========================================================== */
+
+@media (max-width: 1380px) {
+    .perekat-cta-section {
+        min-height: 245px;
+    }
+
+    .perekat-cta-layout {
+        grid-template-columns:
+            minmax(0, 1fr) minmax(320px, 0.67fr);
+        gap: 95px;
+    }
+
+    .perekat-cta-title {
+        font-size: 44px;
+    }
+
+    .perekat-cta-description {
+        font-size: 13px;
+    }
+
+    .perekat-cta-actions {
+        max-width: 385px;
+    }
+
+    .perekat-cta-chevron {
+        left: 53%;
+
+        width: 112px;
+    }
+
+    .perekat-cta-chevron-top,
+    .perekat-cta-chevron-bottom {
+        left: 31px;
+
+        width: 27px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1050px) {
+    .perekat-cta-layout {
+        grid-template-columns:
+            minmax(0, 1fr) minmax(290px, 0.7fr);
+        gap: 65px;
+    }
+
+    .perekat-cta-title {
+        font-size: 39px;
+    }
+
+    .perekat-cta-chevron {
+        left: 51%;
+
+        opacity: 0.82;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 820px) {
+    .perekat-cta-section {
+        min-height: 0;
+        padding:
+            65px 0;
+    }
+
+    .perekat-cta-layout {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .perekat-cta-content {
+        max-width: 650px;
+    }
+
+    .perekat-cta-title {
+        font-size: clamp(39px, 7vw, 50px);
+    }
+
+    .perekat-cta-actions {
+        max-width: 480px;
+
+        justify-self: start;
+    }
+
+    .perekat-cta-chevron {
+        top: auto;
+        right: -20px;
+        bottom: -145px;
+        left: auto;
+
+        height: 390px;
+
+        opacity: 0.28;
+
+        transform: rotate(10deg);
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 560px) {
+    .perekat-cta-section {
+        padding:
+            52px 0;
+    }
+
+    .perekat-cta-layout {
+        gap: 32px;
+    }
+
+    .perekat-cta-title {
+        font-size: 34px;
+        line-height: 1.18;
+        letter-spacing: -1.4px;
+    }
+
+    .perekat-cta-title br {
+        display: none;
+    }
+
+    .perekat-cta-description {
+        margin-top: 17px;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .perekat-cta-actions {
+        gap: 12px;
+    }
+
+    .perekat-cta-whatsapp,
+    .perekat-cta-secondary {
+        min-height: 56px;
+        padding:
+            13px 17px;
+
+        font-size: 13px;
+    }
+
+    .perekat-cta-whatsapp-icon {
+        width: 27px;
+        height: 27px;
+    }
+
+    .perekat-cta-chevron {
+        display: none;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 390px) {
+    .perekat-cta-title {
+        font-size: 30px;
+    }
+
+    .perekat-cta-whatsapp {
+        gap: 10px;
+
+        font-size: 12px;
+    }
+
+    .perekat-cta-secondary {
+        font-size: 12px;
+    }
+}

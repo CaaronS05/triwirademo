@@ -1,0 +1,112 @@
+<header class="global-header" data-global-header>
+    <div class="global-header__inner">
+        <a class="global-header__brand" href="/index.html" aria-label="PT. TRI WIRA SAKTI">
+            <img
+                class="global-header__logo"
+                src="/assets/images/logo/logo-tri-wira-sakti-white.png"
+                alt="PT. TRI WIRA SAKTI"
+            >
+        </a>
+
+        <nav class="global-header__nav" aria-label="Navigasi utama">
+            <a class="global-header__link" href="/index.html" data-nav-key="home">Home</a>
+            <a class="global-header__link" href="/index.html#tentang" data-nav-key="tentang">Tentang</a>
+            <a class="global-header__link" href="/index.html#produk" data-nav-key="produk">Produk</a>
+            <a class="global-header__link" href="/index.html#layanan" data-nav-key="layanan">Layanan</a>
+            <a class="global-header__link" href="/index.html#cakupan" data-nav-key="cakupan">Cakupan</a>
+            <a class="global-header__link" href="/index.html#kontak" data-nav-key="kontak">Kontak</a>
+        </nav>
+
+        <div class="global-header__actions">
+            <div class="global-header__language" aria-label="Pilihan bahasa">
+                <button
+                    class="global-header__language-button is-active"
+                    type="button"
+                    data-global-language="id"
+                    aria-pressed="true"
+                >
+                    ID
+                </button>
+                <span class="global-header__language-divider" aria-hidden="true">/</span>
+                <button
+                    class="global-header__language-button"
+                    type="button"
+                    data-global-language="en"
+                    aria-pressed="false"
+                >
+                    EN
+                </button>
+            </div>
+
+            <a class="global-header__sales" href="/index.html#kontak">
+                <img
+                    class="global-header__sales-icon"
+                    src="/assets/icons/whatsapp/whatsapp-logo.svg"
+                    alt=""
+                    aria-hidden="true"
+                >
+                <span>Hubungi Sales</span>
+            </a>
+
+            <button
+                class="global-header__toggle"
+                type="button"
+                data-global-menu-toggle
+                aria-label="Buka navigasi"
+                aria-controls="globalHeaderMobile"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+
+    <nav
+        class="global-header__mobile"
+        id="globalHeaderMobile"
+        data-global-mobile-nav
+        aria-label="Navigasi mobile"
+        aria-hidden="true"
+    >
+        <a class="global-header__mobile-link" href="/index.html" data-nav-key="home">Home</a>
+        <a class="global-header__mobile-link" href="/index.html#tentang" data-nav-key="tentang">Tentang</a>
+        <a class="global-header__mobile-link" href="/index.html#produk" data-nav-key="produk">Produk</a>
+        <a class="global-header__mobile-link" href="/index.html#layanan" data-nav-key="layanan">Layanan</a>
+        <a class="global-header__mobile-link" href="/index.html#cakupan" data-nav-key="cakupan">Cakupan</a>
+        <a class="global-header__mobile-link" href="/index.html#kontak" data-nav-key="kontak">Kontak</a>
+
+        <div class="global-header__mobile-row">
+            <div class="global-header__language" aria-label="Pilihan bahasa mobile">
+                <button
+                    class="global-header__language-button is-active"
+                    type="button"
+                    data-global-language="id"
+                    aria-pressed="true"
+                >
+                    ID
+                </button>
+                <span class="global-header__language-divider" aria-hidden="true">/</span>
+                <button
+                    class="global-header__language-button"
+                    type="button"
+                    data-global-language="en"
+                    aria-pressed="false"
+                >
+                    EN
+                </button>
+            </div>
+
+            <a class="global-header__sales global-header__sales--mobile" href="/index.html#kontak">
+                <img
+                    class="global-header__sales-icon"
+                    src="/assets/icons/whatsapp/whatsapp-logo.svg"
+                    alt=""
+                    aria-hidden="true"
+                >
+                <span>Hubungi Sales</span>
+            </a>
+        </div>
+    </nav>
+</header>

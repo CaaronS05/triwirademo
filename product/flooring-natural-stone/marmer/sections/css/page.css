@@ -1,0 +1,1258 @@
+/* ==========================================================
+   MARBLE COLLECTION PAGE
+========================================================== */
+
+:root {
+    --marmer-red: #e60012;
+    --marmer-red-dark: #c90010;
+    --marmer-black: #08090d;
+    --marmer-text: #555862;
+    --marmer-border: #d9d9d9;
+    --marmer-soft: #f6f6f6;
+}
+
+.marmer-page {
+    background-color: #ffffff;
+    color: var(--marmer-black);
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.marmer-page-container {
+    width: min(100% - 72px, 1460px);
+    margin-inline: auto;
+}
+
+.marmer-main {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.marmer-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+
+    background-color: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #eeeeee;
+    backdrop-filter: blur(14px);
+}
+
+.marmer-header-container {
+    display: grid;
+    grid-template-columns: 220px 1fr 260px;
+    align-items: center;
+    gap: 30px;
+
+    width: min(100% - 72px, 1460px);
+    min-height: 76px;
+    margin-inline: auto;
+}
+
+.marmer-header-logo-link {
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+}
+
+.marmer-header-logo {
+    display: block;
+
+    width: 118px;
+    height: auto;
+}
+
+.marmer-header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 42px;
+}
+
+.marmer-header-nav a {
+    position: relative;
+
+    color: #111216;
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.marmer-header-nav a.is-active {
+    color: var(--marmer-red);
+}
+
+.marmer-header-nav a.is-active::after {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    left: 0;
+
+    height: 3px;
+
+    background-color: var(--marmer-red);
+
+    content: "";
+}
+
+.marmer-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+.marmer-header-language {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #111216;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.marmer-header-language a {
+    color: #111216;
+}
+
+.marmer-header-language a.is-active {
+    color: var(--marmer-red);
+}
+
+.marmer-header-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    padding: 10px 20px;
+
+    background-color: var(--marmer-red);
+    border-radius: 3px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.marmer-menu-button {
+    display: none;
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.marmer-hero-section {
+    width: 100%;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.marmer-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+
+    padding-top: 27px;
+
+    color: #777a82;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.marmer-breadcrumb a {
+    color: #777a82;
+}
+
+.marmer-breadcrumb strong {
+    color: var(--marmer-red);
+}
+
+.marmer-hero-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(400px, 0.82fr) minmax(0, 1.18fr);
+    align-items: stretch;
+
+    min-height: 365px;
+    margin-top: 24px;
+}
+
+.marmer-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding:
+        25px 54px 48px 0;
+}
+
+.marmer-hero-eyebrow {
+    margin: 0 0 11px;
+
+    color: var(--marmer-red);
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.marmer-hero-title {
+    margin: 0;
+
+    color: var(--marmer-black);
+
+    font-size: clamp(50px, 5vw, 76px);
+    font-weight: 800;
+    line-height: 1.03;
+    letter-spacing: -3px;
+}
+
+.marmer-hero-description {
+    max-width: 650px;
+    margin: 24px 0 0;
+
+    color: var(--marmer-text);
+
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.marmer-hero-note {
+    max-width: 530px;
+    margin: 20px 0 0;
+
+    color: #555862;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.marmer-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.marmer-hero-primary,
+.marmer-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 51px;
+    padding: 13px 27px;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.marmer-hero-primary {
+    background-color: var(--marmer-red);
+    border: 1px solid var(--marmer-red);
+
+    color: #ffffff;
+}
+
+.marmer-hero-secondary {
+    background-color: #ffffff;
+    border: 1px solid var(--marmer-red);
+
+    color: var(--marmer-red);
+}
+
+.marmer-hero-visual {
+    position: relative;
+
+    min-height: 365px;
+
+    overflow: hidden;
+}
+
+.marmer-hero-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.marmer-hero-chevron {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -38px;
+
+    width: 150px;
+
+    pointer-events: none;
+}
+
+.marmer-hero-chevron-top,
+.marmer-hero-chevron-bottom {
+    position: absolute;
+    left: 55px;
+
+    width: 36px;
+    height: 58%;
+
+    background: linear-gradient(180deg, #ff1e11, #d80012);
+}
+
+.marmer-hero-chevron-top {
+    top: -28px;
+
+    transform: rotate(-34deg);
+    transform-origin: bottom center;
+}
+
+.marmer-hero-chevron-bottom {
+    bottom: -28px;
+
+    transform: rotate(34deg);
+    transform-origin: top center;
+}
+
+
+/* ==========================================================
+   COLLECTION
+========================================================== */
+
+.marmer-collection-section {
+    padding:
+        26px 0 26px;
+
+    background-color: #ffffff;
+}
+
+.marmer-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+
+    width: 100%;
+}
+
+.marmer-filter-button {
+    min-height: 46px;
+    padding: 10px 28px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--marmer-border);
+
+    color: #353841;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.marmer-filter-button.is-active {
+    background-color: var(--marmer-red);
+    border-color: var(--marmer-red);
+
+    color: #ffffff;
+}
+
+.marmer-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 16px;
+
+    margin-top: 18px;
+}
+
+.marmer-spec-item {
+    display: flex;
+    align-items: center;
+
+    min-height: 50px;
+    padding: 12px 20px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--marmer-border);
+    border-radius: 5px;
+
+    color: #50535c;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.marmer-section-header {
+    margin:
+        29px 0 15px;
+}
+
+.marmer-section-header h2 {
+    margin: 0;
+
+    color: var(--marmer-black);
+
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.9px;
+}
+
+
+/* ==========================================================
+   GALLERY
+========================================================== */
+
+.marmer-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.marmer-product-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    background-color: #ffffff;
+    border: 1px solid var(--marmer-border);
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        border-color 180ms ease;
+}
+
+.marmer-product-card:hover {
+    border-color: rgba(230, 0, 18, 0.45);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+
+    transform: translateY(-4px);
+}
+
+.marmer-product-card img {
+    display: block;
+
+    width: 100%;
+    height: 150px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.marmer-product-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding:
+        13px 13px 14px;
+}
+
+.marmer-product-content h3 {
+    margin: 0;
+
+    color: #18191d;
+
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.marmer-product-content p {
+    margin: 5px 0 0;
+
+    color: #555862;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.marmer-product-content span {
+    margin-top: 3px;
+
+    color: #555862;
+
+    font-size: 11px;
+}
+
+.marmer-product-content small {
+    margin-top: 7px;
+
+    color: #555862;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.marmer-product-content a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 37px;
+    margin-top: 13px;
+    padding: 9px 12px;
+
+    border: 1px solid var(--marmer-red);
+    border-radius: 4px;
+
+    color: var(--marmer-red);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.marmer-product-content a:hover {
+    background-color: var(--marmer-red);
+
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   HIGHLIGHTS
+========================================================== */
+
+.marmer-highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+
+    margin-top: 24px;
+}
+
+.marmer-highlight-card {
+    padding: 25px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--marmer-border);
+    border-radius: 8px;
+}
+
+.marmer-highlight-card h3 {
+    margin: 0;
+
+    color: var(--marmer-red);
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+}
+
+.marmer-highlight-card p {
+    max-width: 360px;
+    margin: 12px 0 0;
+
+    color: #555862;
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.marmer-highlight-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+
+    margin-top: 19px;
+}
+
+.marmer-highlight-images img {
+    width: 100%;
+    height: 96px;
+
+    border-radius: 4px;
+
+    object-fit: cover;
+}
+
+.marmer-highlight-card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 220px;
+    min-height: 42px;
+    margin:
+        18px auto 0;
+
+    border: 1px solid var(--marmer-red);
+    border-radius: 4px;
+
+    color: var(--marmer-red);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   FEATURE PANEL
+========================================================== */
+
+.marmer-feature-panel {
+    display: grid;
+    grid-template-columns:
+        44px minmax(0, 1.2fr) minmax(260px, 0.8fr) 90px 44px;
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 24px;
+    padding: 16px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--marmer-border);
+    border-radius: 8px;
+}
+
+.marmer-feature-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--marmer-border);
+    border-radius: 50%;
+
+    color: #333;
+
+    font-size: 32px;
+    line-height: 1;
+}
+
+.marmer-feature-main-image {
+    width: 100%;
+    height: 185px;
+
+    border-radius: 5px;
+
+    object-fit: cover;
+}
+
+.marmer-feature-content h3 {
+    margin: 0;
+
+    color: #111216;
+
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.marmer-feature-content p,
+.marmer-feature-content span,
+.marmer-feature-content small {
+    display: block;
+
+    color: #555862;
+}
+
+.marmer-feature-content p {
+    margin: 8px 0 0;
+
+    font-size: 13px;
+}
+
+.marmer-feature-content span {
+    margin-top: 4px;
+
+    font-size: 13px;
+}
+
+.marmer-feature-content small {
+    max-width: 380px;
+    margin-top: 9px;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.marmer-feature-content a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 40px;
+    margin-top: 14px;
+    padding: 10px 22px;
+
+    background-color: var(--marmer-red);
+    border-radius: 4px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.marmer-feature-thumbnails {
+    display: grid;
+    gap: 8px;
+}
+
+.marmer-feature-thumbnails img {
+    width: 100%;
+    height: 82px;
+
+    border-radius: 4px;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================================
+   GUIDE
+========================================================== */
+
+.marmer-guide-section {
+    margin-top: 27px;
+}
+
+.marmer-guide-section h2 {
+    margin: 0 0 15px;
+
+    color: var(--marmer-black);
+
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.marmer-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.marmer-guide-card {
+    min-height: 118px;
+    padding: 22px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--marmer-border);
+    border-radius: 7px;
+}
+
+.marmer-guide-card h3 {
+    margin: 0;
+
+    color: #18191d;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.marmer-guide-card p {
+    margin: 9px 0 0;
+
+    color: #555862;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.marmer-guide-note {
+    margin-top: 16px;
+    padding: 13px 18px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--marmer-border);
+    border-radius: 5px;
+
+    color: #555862;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   APPLICATION CTA
+========================================================== */
+
+.marmer-application-cta {
+    position: relative;
+
+    background-color: #0a0b0d;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+.marmer-application-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr) 110px minmax(300px, 0.45fr);
+    align-items: center;
+    gap: 38px;
+
+    min-height: 210px;
+    padding:
+        24px 0;
+}
+
+.marmer-application-content h2 {
+    margin: 0 0 14px;
+
+    color: #ffffff;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.marmer-application-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.marmer-application-grid article {
+    background-color: #ffffff;
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.marmer-application-grid img {
+    display: block;
+
+    width: 100%;
+    height: 80px;
+
+    object-fit: cover;
+}
+
+.marmer-application-grid span {
+    display: block;
+
+    padding: 9px 8px;
+
+    color: #18191d;
+
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.marmer-application-content p {
+    margin: 10px 0 0;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 11px;
+}
+
+.marmer-application-chevron {
+    position: relative;
+
+    width: 110px;
+    height: 230px;
+
+    pointer-events: none;
+}
+
+.marmer-application-chevron-top,
+.marmer-application-chevron-bottom {
+    position: absolute;
+    left: 39px;
+
+    width: 30px;
+    height: 133px;
+
+    background: linear-gradient(180deg, #ff1e11, #d80012);
+}
+
+.marmer-application-chevron-top {
+    top: -12px;
+
+    transform: rotate(-34deg);
+    transform-origin: bottom center;
+}
+
+.marmer-application-chevron-bottom {
+    bottom: -12px;
+
+    transform: rotate(34deg);
+    transform-origin: top center;
+}
+
+.marmer-cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.marmer-cta-primary,
+.marmer-cta-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+    padding: 12px 18px;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.marmer-cta-primary {
+    background-color: var(--marmer-red);
+
+    color: #ffffff;
+}
+
+.marmer-cta-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.75);
+
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   RELATED LINKS
+========================================================== */
+
+.marmer-related-links {
+    padding:
+        22px 0;
+
+    background-color: #ffffff;
+}
+
+.marmer-related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.marmer-related-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 72px;
+    padding: 18px 22px;
+
+    border: 1px solid var(--marmer-border);
+    border-radius: 6px;
+
+    color: #18191d;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.marmer-related-grid span {
+    color: var(--marmer-red);
+
+    font-size: 24px;
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.marmer-footer {
+    position: relative;
+
+    padding:
+        42px 0 24px;
+
+    background-color: #08090d;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+.marmer-footer-layout {
+    position: relative;
+
+    display: grid;
+    grid-template-columns:
+        minmax(240px, 1.15fr) minmax(150px, 0.7fr) minmax(220px, 0.9fr) minmax(210px, 0.8fr) 90px;
+    gap: 42px;
+}
+
+.marmer-footer-logo {
+    width: 115px;
+    height: auto;
+
+    filter: brightness(0) invert(1);
+}
+
+.marmer-footer-brand p {
+    max-width: 330px;
+    margin: 18px 0 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.marmer-footer-column,
+.marmer-footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.marmer-footer-column h2,
+.marmer-footer-contact h2 {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.marmer-footer-column a,
+.marmer-footer-contact p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 12px;
+}
+
+.marmer-footer-language {
+    margin-top: 14px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.marmer-footer-chevron {
+    position: relative;
+
+    width: 90px;
+    height: 220px;
+
+    pointer-events: none;
+}
+
+.marmer-footer-chevron-top,
+.marmer-footer-chevron-bottom {
+    position: absolute;
+    left: 31px;
+
+    width: 28px;
+    height: 130px;
+
+    background: linear-gradient(180deg, #ff1e11, #d80012);
+}
+
+.marmer-footer-chevron-top {
+    top: -10px;
+
+    transform: rotate(-34deg);
+    transform-origin: bottom center;
+}
+
+.marmer-footer-chevron-bottom {
+    bottom: -10px;
+
+    transform: rotate(34deg);
+    transform-origin: top center;
+}
+
+.marmer-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    margin-top: 36px;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.marmer-footer-bottom p,
+.marmer-footer-bottom a,
+.marmer-footer-bottom span {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1200px) {
+    .marmer-gallery-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .marmer-spec-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .marmer-application-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .marmer-application-chevron {
+        display: none;
+    }
+
+    .marmer-related-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .marmer-footer-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .marmer-footer-chevron {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .marmer-header-container {
+        grid-template-columns: 1fr auto;
+    }
+
+    .marmer-header-nav {
+        display: none;
+    }
+
+    .marmer-header-language,
+    .marmer-header-button {
+        display: none;
+    }
+
+    .marmer-menu-button {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        width: 36px;
+
+        background: transparent;
+        border: 0;
+    }
+
+    .marmer-menu-button span {
+        width: 100%;
+        height: 2px;
+
+        background-color: #111;
+    }
+
+    .marmer-hero-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .marmer-hero-content {
+        padding-right: 0;
+    }
+
+    .marmer-hero-visual {
+        min-height: 310px;
+    }
+
+    .marmer-gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .marmer-highlight-grid,
+    .marmer-guide-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marmer-feature-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .marmer-feature-arrow,
+    .marmer-feature-thumbnails {
+        display: none;
+    }
+
+    .marmer-application-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .marmer-page-container {
+        width: min(100% - 36px, 1460px);
+    }
+
+    .marmer-header-container {
+        width: min(100% - 36px, 1460px);
+    }
+
+    .marmer-hero-title {
+        font-size: 43px;
+    }
+
+    .marmer-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .marmer-filter-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .marmer-spec-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .marmer-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marmer-related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marmer-footer-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .marmer-footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

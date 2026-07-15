@@ -1,0 +1,420 @@
+/* ==========================================================
+   STAGE 9 — PRODUK TERKAIT
+========================================================== */
+
+.semen-related-section {
+    width: 100%;
+    padding:
+        clamp(56px, 6vw, 82px) 0 clamp(64px, 7vw, 96px);
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #dedede;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.semen-related-header {
+    width: 100%;
+    margin-bottom: 26px;
+}
+
+.semen-related-title {
+    margin: 0;
+
+    color: #090909;
+
+    font-size: clamp(32px, 3vw, 45px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.semen-related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(18px, 1.8vw, 28px);
+
+    width: 100%;
+}
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.semen-related-card {
+    display: grid;
+    grid-template-columns:
+        minmax(170px, 0.9fr) minmax(210px, 1.1fr);
+
+    min-width: 0;
+    min-height: 235px;
+
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    transition:
+        border-color 220ms ease,
+        box-shadow 220ms ease,
+        transform 220ms ease;
+}
+
+.semen-related-card:hover {
+    border-color: rgba(239, 0, 0, 0.42);
+    box-shadow: 0 17px 38px rgba(0, 0, 0, 0.08);
+
+    transform: translateY(-5px);
+}
+
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.semen-related-media {
+    position: relative;
+
+    display: block;
+
+    min-width: 0;
+    min-height: 235px;
+
+    background-color: #eeeeee;
+
+    overflow: hidden;
+}
+
+.semen-related-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 600ms ease;
+}
+
+.semen-related-card:hover .semen-related-image {
+    transform: scale(1.05);
+}
+
+.semen-related-image-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            transparent 65%,
+            rgba(0, 0, 0, 0.06) 100%);
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.semen-related-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-width: 0;
+    padding:
+        27px 24px 23px;
+}
+
+.semen-related-copy {
+    min-width: 0;
+}
+
+.semen-related-card-title {
+    margin: 0;
+
+    color: #111111;
+
+    font-size: clamp(16px, 1.25vw, 20px);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.35px;
+}
+
+.semen-related-description {
+    margin: 13px 0 0;
+
+    color: #505050;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.semen-related-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+
+    width: 100%;
+    min-height: 42px;
+    margin-top: 20px;
+    padding:
+        10px 14px;
+
+    background-color: #ffffff;
+    border: 1px solid #ef0000;
+    border-radius: 4px;
+
+    color: #ef0000;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    transition:
+        background-color 180ms ease,
+        color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.semen-related-button svg {
+    flex: 0 0 auto;
+
+    width: 19px;
+    height: 19px;
+
+    transition: transform 180ms ease;
+}
+
+.semen-related-button:hover {
+    background-color: #ef0000;
+    box-shadow: 0 10px 24px rgba(239, 0, 0, 0.17);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+.semen-related-button:hover svg {
+    transform: translateX(4px);
+}
+
+
+/* ==========================================================
+   LARGE LAPTOP
+========================================================== */
+
+@media (max-width: 1380px) {
+    .semen-related-grid {
+        gap: 16px;
+    }
+
+    .semen-related-card {
+        grid-template-columns:
+            minmax(140px, 0.82fr) minmax(180px, 1.18fr);
+
+        min-height: 215px;
+    }
+
+    .semen-related-media {
+        min-height: 215px;
+    }
+
+    .semen-related-content {
+        padding:
+            23px 18px 20px;
+    }
+
+    .semen-related-card-title {
+        font-size: 16px;
+    }
+
+    .semen-related-description {
+        margin-top: 10px;
+
+        font-size: 11px;
+    }
+
+    .semen-related-button {
+        min-height: 40px;
+        margin-top: 16px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1080px) {
+    .semen-related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .semen-related-card {
+        grid-template-columns:
+            minmax(230px, 0.75fr) minmax(350px, 1.25fr);
+
+        min-height: 245px;
+    }
+
+    .semen-related-media {
+        min-height: 245px;
+    }
+
+    .semen-related-content {
+        padding:
+            34px 36px 29px;
+    }
+
+    .semen-related-card-title {
+        font-size: 22px;
+    }
+
+    .semen-related-description {
+        max-width: 500px;
+        margin-top: 14px;
+
+        font-size: 14px;
+    }
+
+    .semen-related-button {
+        max-width: 240px;
+        min-height: 46px;
+        margin-top: 24px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 800px) {
+    .semen-related-section {
+        padding:
+            58px 0 72px;
+    }
+
+    .semen-related-title {
+        font-size: 40px;
+        letter-spacing: -1.3px;
+    }
+
+    .semen-related-card {
+        grid-template-columns:
+            minmax(190px, 0.8fr) minmax(260px, 1.2fr);
+    }
+
+    .semen-related-content {
+        padding:
+            28px 25px 25px;
+    }
+
+    .semen-related-description {
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 560px) {
+    .semen-related-section {
+        padding:
+            50px 0 64px;
+    }
+
+    .semen-related-header {
+        margin-bottom: 22px;
+    }
+
+    .semen-related-title {
+        font-size: 34px;
+        letter-spacing: -1.1px;
+    }
+
+    .semen-related-grid {
+        gap: 14px;
+    }
+
+    .semen-related-card {
+        display: flex;
+        flex-direction: column;
+
+        min-height: 0;
+    }
+
+    .semen-related-media {
+        width: 100%;
+        min-height: 220px;
+        height: 220px;
+    }
+
+    .semen-related-content {
+        padding:
+            23px 21px 24px;
+    }
+
+    .semen-related-card-title {
+        font-size: 20px;
+    }
+
+    .semen-related-description {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .semen-related-button {
+        max-width: none;
+        margin-top: 21px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 390px) {
+    .semen-related-title {
+        font-size: 30px;
+    }
+
+    .semen-related-media {
+        min-height: 190px;
+        height: 190px;
+    }
+
+    .semen-related-content {
+        padding-inline: 18px;
+    }
+}

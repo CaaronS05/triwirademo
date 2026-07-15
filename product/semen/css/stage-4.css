@@ -1,0 +1,371 @@
+/* ==========================================================
+   STAGE 4 — INFORMASI PRODUK SEMEN
+========================================================== */
+
+.semen-information-section {
+    width: 100%;
+    padding:
+        clamp(72px, 7vw, 105px) 0 clamp(82px, 8vw, 120px);
+
+    background-color: #ffffff;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.semen-information-header {
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.semen-information-title {
+    margin: 0;
+
+    color: #090909;
+
+    font-size: clamp(34px, 3.2vw, 48px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1.7px;
+}
+
+
+/* ==========================================================
+   INFORMATION TABLE
+========================================================== */
+
+.semen-information-table {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    width: 100%;
+
+    background-color: #ffffff;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.semen-information-column {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+.semen-information-column-right {
+    border-left: 1px solid #d8d8d8;
+}
+
+.semen-information-row {
+    display: grid;
+    grid-template-columns:
+        minmax(170px, 0.88fr) minmax(220px, 1.12fr);
+
+    min-height: 62px;
+
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.semen-information-column .semen-information-row:last-child {
+    border-bottom: 0;
+}
+
+.semen-information-row-large {
+    flex: 1;
+    min-height: 124px;
+}
+
+.semen-information-label,
+.semen-information-value {
+    display: flex;
+    align-items: center;
+
+    min-width: 0;
+    padding:
+        15px 22px;
+}
+
+.semen-information-label {
+    background-color: #ffffff;
+    border-right: 1px solid #d8d8d8;
+
+    color: #171717;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.semen-information-value {
+    color: #555555;
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+
+/* ==========================================================
+   INFORMATION NOTICE
+========================================================== */
+
+.semen-information-notice {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 18px;
+
+    width: 100%;
+    min-height: 64px;
+    margin-top: 22px;
+    padding:
+        13px 20px;
+
+    background-color: #ffffff;
+    border: 1px solid #a6a6a6;
+    border-radius: 6px;
+
+    color: #171717;
+
+    transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.semen-information-notice:hover {
+    border-color: #ef0000;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+
+    transform: translateY(-2px);
+}
+
+.semen-information-notice-icon {
+    flex: 0 0 auto;
+
+    width: 34px;
+    height: 34px;
+
+    color: #151515;
+}
+
+.semen-information-notice-icon svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+.semen-information-notice-text {
+    margin: 0;
+
+    color: #3d3d3d;
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+.semen-information-notice-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    color: #ef0000;
+
+    transition: transform 180ms ease;
+}
+
+.semen-information-notice-arrow svg {
+    width: 22px;
+    height: 22px;
+}
+
+.semen-information-notice:hover .semen-information-notice-arrow {
+    transform: translateX(4px);
+}
+
+
+/* ==========================================================
+   LARGE LAPTOP
+========================================================== */
+
+@media (max-width: 1380px) {
+    .semen-information-row {
+        grid-template-columns:
+            minmax(150px, 0.85fr) minmax(190px, 1.15fr);
+
+        min-height: 58px;
+    }
+
+    .semen-information-row-large {
+        min-height: 116px;
+    }
+
+    .semen-information-label,
+    .semen-information-value {
+        padding:
+            14px 18px;
+    }
+
+    .semen-information-label {
+        font-size: 13px;
+    }
+
+    .semen-information-value {
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1000px) {
+    .semen-information-table {
+        grid-template-columns: 1fr;
+    }
+
+    .semen-information-column-right {
+        border-top: 1px solid #d8d8d8;
+        border-left: 0;
+    }
+
+    .semen-information-row,
+    .semen-information-row-large {
+        grid-template-columns:
+            minmax(190px, 0.78fr) minmax(260px, 1.22fr);
+
+        min-height: 64px;
+    }
+
+    .semen-information-column:first-child .semen-information-row:last-child {
+        border-bottom: 0;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 800px) {
+    .semen-information-section {
+        padding:
+            68px 0 82px;
+    }
+
+    .semen-information-header {
+        margin-bottom: 24px;
+    }
+
+    .semen-information-title {
+        font-size: 40px;
+        letter-spacing: -1.4px;
+    }
+
+    .semen-information-row,
+    .semen-information-row-large {
+        grid-template-columns:
+            minmax(165px, 0.82fr) minmax(210px, 1.18fr);
+    }
+
+    .semen-information-notice {
+        gap: 15px;
+
+        padding:
+            14px 17px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 560px) {
+    .semen-information-section {
+        padding:
+            54px 0 68px;
+    }
+
+    .semen-information-title {
+        font-size: 34px;
+        letter-spacing: -1.2px;
+    }
+
+    .semen-information-table {
+        border-radius: 7px;
+    }
+
+    .semen-information-row,
+    .semen-information-row-large {
+        grid-template-columns: 1fr;
+
+        min-height: 0;
+    }
+
+    .semen-information-label,
+    .semen-information-value {
+        min-height: 54px;
+        padding:
+            14px 17px;
+    }
+
+    .semen-information-label {
+        background-color: #fafafa;
+        border-right: 0;
+        border-bottom: 1px solid #e2e2e2;
+
+        font-size: 14px;
+    }
+
+    .semen-information-value {
+        font-size: 13px;
+    }
+
+    .semen-information-notice {
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: flex-start;
+        gap: 13px;
+
+        margin-top: 18px;
+    }
+
+    .semen-information-notice-arrow {
+        display: none;
+    }
+
+    .semen-information-notice-icon {
+        width: 31px;
+        height: 31px;
+    }
+
+    .semen-information-notice-text {
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 390px) {
+    .semen-information-title {
+        font-size: 30px;
+    }
+
+    .semen-information-label,
+    .semen-information-value {
+        padding-inline: 14px;
+    }
+}

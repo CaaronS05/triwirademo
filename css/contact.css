@@ -1,0 +1,806 @@
+/* ==========================================================
+   CONTACT SECTION
+========================================================== */
+
+.contact-section {
+    position: relative;
+    width: 100%;
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+
+.contact-layout {
+    position: relative;
+    isolation: isolate;
+
+    display: grid;
+    grid-template-columns: 55% 45%;
+
+    width: 100%;
+    min-height: 720px;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   LEFT CONTENT
+========================================================== */
+
+.contact-content-wrapper {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+
+    min-width: 0;
+
+    padding:
+        clamp(40px, 4vw, 75px) clamp(80px, 8vw, 140px) clamp(40px, 4vw, 75px) var(--container-padding);
+
+    background:
+        linear-gradient(135deg,
+            #ffffff 0%,
+            #fbfbfa 58%,
+            #f2f2f0 100%);
+}
+
+.contact-content {
+    position: relative;
+    z-index: 6;
+
+    width: 100%;
+    max-width: 760px;
+}
+
+
+/* ==========================================================
+   CONTACT BRAND
+========================================================== */
+
+.contact-brand {
+    display: none;
+    align-items: center;
+
+    margin-bottom: clamp(48px, 5vw, 78px);
+
+    transition: opacity var(--transition-fast);
+}
+
+.contact-brand:hover {
+    opacity: 0.8;
+}
+
+.contact-brand-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 165px;
+}
+
+.contact-brand-symbol {
+    color: var(--color-black);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -7px;
+}
+
+.contact-brand-name {
+    margin-top: 14px;
+
+    color: var(--color-black);
+
+    font-size: 10px;
+    font-weight: var(--font-bold);
+    line-height: 1;
+    letter-spacing: 4px;
+    white-space: nowrap;
+}
+
+.contact-logo {
+    display: block;
+
+    width: 170px;
+    max-height: 95px;
+
+    object-fit: contain;
+}
+
+
+/* ==========================================================
+   CONTACT TYPOGRAPHY
+========================================================== */
+
+.contact-eyebrow {
+    margin: 0 0 24px;
+
+    color: var(--color-primary);
+
+    font-size: clamp(12px, 1vw, 17px);
+    font-weight: var(--font-extrabold);
+    line-height: 1.4;
+    letter-spacing: 6px;
+}
+
+.contact-title {
+    margin: 0;
+
+    color: var(--color-black);
+
+    font-size: clamp(50px, 4.6vw, 82px);
+    font-weight: var(--font-bold);
+    line-height: 1.06;
+    letter-spacing: -3.5px;
+}
+
+.contact-description {
+    max-width: 600px;
+    margin: 26px 0 0;
+
+    color: var(--color-text-gray);
+
+    font-size: clamp(16px, 1.2vw, 22px);
+    font-weight: var(--font-regular);
+    line-height: 1.65;
+}
+
+
+/* ==========================================================
+   WHATSAPP BUTTON
+========================================================== */
+
+.contact-whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+
+    width: min(100%, 390px);
+    min-height: 64px;
+    margin-top: 34px;
+    padding: 14px 24px;
+
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 6px;
+
+    color: var(--color-white);
+
+    font-size: 17px;
+    font-weight: var(--font-semibold);
+    line-height: 1;
+
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.contact-whatsapp-button:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+
+    box-shadow: var(--shadow-medium);
+
+    transform: translateY(-3px);
+}
+
+.contact-whatsapp-button>img.contact-whatsapp-icon {
+    flex: 0 0 auto;
+
+    width: 36px;
+    height: 36px;
+    display: block;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+.contact-button-arrow {
+    flex: 0 0 auto;
+
+    width: 24px;
+    height: 24px;
+}
+
+
+/* ==========================================================
+   INFORMATION CARDS
+========================================================== */
+
+.contact-information-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+
+    margin-top: 50px;
+}
+
+.contact-information-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    min-width: 0;
+    min-height: 92px;
+    padding: 16px 18px;
+
+    background-color: rgba(255, 255, 255, 0.82);
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+}
+
+.contact-information-icon {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    color: var(--color-primary);
+}
+
+.contact-information-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-information-content {
+    min-width: 0;
+}
+
+.contact-information-content h3 {
+    margin: 0;
+
+    color: var(--color-black);
+
+    font-size: 14px;
+    font-weight: var(--font-bold);
+    line-height: 1.35;
+}
+
+.contact-information-content p {
+    margin: 4px 0 0;
+
+    color: var(--color-black);
+
+    font-size: 14px;
+    font-weight: var(--font-regular);
+    line-height: 1.45;
+    white-space: nowrap;
+}
+
+
+/* ==========================================================
+   ASSURANCE
+========================================================== */
+
+.contact-assurance {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    max-width: 580px;
+    margin-top: 36px;
+}
+
+.contact-assurance-icon {
+    flex: 0 0 auto;
+
+    width: 52px;
+    height: 52px;
+
+    color: var(--color-text-gray);
+}
+
+.contact-assurance-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-assurance p {
+    margin: 0;
+
+    color: var(--color-text-gray);
+
+    font-size: 15px;
+    font-weight: var(--font-regular);
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   RIGHT MEDIA
+========================================================== */
+
+.contact-media {
+    position: relative;
+    z-index: 1;
+
+    min-width: 0;
+    min-height: 100%;
+
+    background-color: #eeeeec;
+
+    overflow: hidden;
+}
+
+.contact-media-image {
+    display: block;
+
+    width: 100%;
+    height: calc(100% - 140px);
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ==========================================================
+   MEDIA CAPTION
+========================================================== */
+
+.contact-media-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    min-height: 180px;
+    padding:
+        35px clamp(50px, 6vw, 110px);
+
+    background:
+        linear-gradient(130deg,
+            #151515 0%,
+            #232323 48%,
+            #101010 100%);
+
+    color: var(--color-white);
+}
+
+.contact-media-caption::before,
+.contact-media-caption::after {
+    position: absolute;
+
+    content: "";
+
+    opacity: 0.13;
+    pointer-events: none;
+}
+
+.contact-media-caption::before {
+    inset: 0;
+
+    background:
+        linear-gradient(55deg,
+            transparent 0%,
+            transparent 42%,
+            rgba(255, 255, 255, 0.15) 43%,
+            transparent 44%,
+            transparent 100%);
+}
+
+.contact-media-caption::after {
+    top: 24px;
+    right: 14%;
+    bottom: 18px;
+
+    width: 180px;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+
+    transform: rotate(35deg);
+}
+
+.contact-caption-line {
+    position: relative;
+    z-index: 2;
+
+    flex: 0 0 auto;
+
+    width: 2px;
+    height: 52px;
+
+    background-color: var(--color-primary);
+}
+
+.contact-media-caption p {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    color: var(--color-white);
+
+    font-size: clamp(14px, 1.2vw, 19px);
+    font-weight: var(--font-regular);
+    line-height: 1.55;
+}
+
+
+/* ==========================================================
+   RED CHEVRON
+========================================================== */
+
+.contact-chevron {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 54%;
+    z-index: 2;
+
+    width: clamp(170px, 15vw, 290px);
+
+    background:
+        linear-gradient(145deg,
+            #f00017 0%,
+            var(--color-primary) 48%,
+            #b90012 100%);
+
+    clip-path: polygon(0 0,
+            34% 0,
+            100% 40%,
+            60% 66%,
+            100% 100%,
+            34% 100%,
+            0 67%,
+            43% 40%);
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   WHITE INNER CHEVRON
+========================================================== */
+
+.contact-white-chevron {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 52%;
+    z-index: 1;
+
+    width: clamp(155px, 13vw, 245px);
+
+    background-color: rgba(255, 255, 255, 0.96);
+
+    clip-path: polygon(0 0,
+            36% 0,
+            100% 40%,
+            62% 66%,
+            100% 100%,
+            36% 100%,
+            0 67%,
+            46% 40%);
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   LAPTOP
+========================================================== */
+
+@media (max-width: 1440px) {
+    .contact-layout {
+        grid-template-columns: 56% 44%;
+        height: 950px;
+        min-height: 950px;
+        overflow: hidden;
+    }
+
+    .contact-content-wrapper {
+        padding:
+            56px 100px 56px var(--container-padding);
+    }
+
+    .contact-brand {
+        margin-bottom: 42px;
+    }
+
+    .contact-title {
+        font-size: clamp(40px, 4.8vw, 56px);
+        letter-spacing: -3px;
+    }
+
+    .contact-description {
+        margin-top: 20px;
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .contact-whatsapp-button {
+        margin-top: 28px;
+    }
+
+    .contact-information-grid {
+        gap: 12px;
+        margin-top: 34px;
+    }
+
+    .contact-information-card {
+        gap: 12px;
+        padding: 12px;
+        min-height: 78px;
+    }
+
+    .contact-information-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .contact-information-content h3,
+    .contact-information-content p {
+        font-size: 12px;
+    }
+
+    .contact-chevron {
+        left: 55%;
+        width: 230px;
+    }
+
+    .contact-white-chevron {
+        left: 53%;
+        width: 205px;
+    }
+
+    .contact-media-caption {
+        min-height: 150px;
+    }
+
+    .contact-media-image {
+        height: calc(100% - 150px);
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1150px) {
+    .contact-layout {
+        grid-template-columns: 58% 42%;
+    }
+
+    .contact-content-wrapper {
+        padding:
+            65px 90px 65px var(--container-padding);
+    }
+
+    .contact-title {
+        font-size: clamp(44px, 5vw, 62px);
+    }
+
+    .contact-information-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .contact-information-card {
+        min-height: 78px;
+    }
+
+    .contact-information-content h3,
+    .contact-information-content p {
+        font-size: 13px;
+    }
+
+    .contact-chevron {
+        left: 58%;
+        width: 190px;
+    }
+
+    .contact-white-chevron {
+        left: 56%;
+        width: 168px;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+    .contact-layout {
+        display: flex;
+        flex-direction: column;
+
+        min-height: auto;
+    }
+
+    .contact-content-wrapper {
+        order: 1;
+
+        padding:
+            70px var(--container-padding) 72px;
+    }
+
+    .contact-content {
+        max-width: 720px;
+        margin-inline: auto;
+    }
+
+    .contact-brand {
+        margin-bottom: 52px;
+    }
+
+    .contact-title {
+        font-size: clamp(44px, 8vw, 68px);
+    }
+
+    .contact-information-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: none;
+    }
+
+    .contact-media {
+        order: 2;
+
+        min-height: 620px;
+    }
+
+    .contact-chevron,
+    .contact-white-chevron {
+        display: none;
+    }
+
+    .contact-content-wrapper::after {
+        position: absolute;
+        right: var(--container-padding);
+        bottom: 0;
+        left: var(--container-padding);
+
+        height: 8px;
+
+        background-color: var(--color-primary);
+
+        content: "";
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 640px) {
+    .contact-content-wrapper {
+        padding:
+            56px var(--container-padding) 60px;
+    }
+
+    .contact-brand {
+        margin-bottom: 42px;
+    }
+
+    .contact-brand-placeholder {
+        align-items: flex-start;
+
+        min-width: 135px;
+    }
+
+    .contact-brand-symbol {
+        font-size: 34px;
+    }
+
+    .contact-brand-name {
+        margin-top: 9px;
+
+        font-size: 7px;
+        letter-spacing: 2.5px;
+    }
+
+    .contact-logo {
+        width: 140px;
+        max-height: 74px;
+    }
+
+    .contact-eyebrow {
+        margin-bottom: 18px;
+
+        font-size: 11px;
+        letter-spacing: 4px;
+    }
+
+    .contact-title {
+        font-size: clamp(38px, 12vw, 52px);
+        line-height: 1.12;
+        letter-spacing: -2px;
+    }
+
+    .contact-title br {
+        display: none;
+    }
+
+    .contact-description {
+        margin-top: 22px;
+
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .contact-whatsapp-button {
+        width: 100%;
+        min-height: 58px;
+        margin-top: 28px;
+        padding: 12px 18px;
+
+        font-size: 15px;
+    }
+
+    .contact-whatsapp-button>svg:first-child {
+        width: 32px;
+        height: 32px;
+    }
+
+    .contact-information-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+
+        margin-top: 34px;
+    }
+
+    .contact-information-card {
+        min-height: 76px;
+    }
+
+    .contact-information-content h3,
+    .contact-information-content p {
+        font-size: 13px;
+    }
+
+    .contact-assurance {
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+
+    .contact-assurance-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .contact-assurance p {
+        font-size: 13px;
+    }
+
+    .contact-media {
+        min-height: 410px;
+    }
+
+    .contact-media-image {
+        height: calc(100% - 125px);
+    }
+
+    .contact-media-caption {
+        justify-content: flex-start;
+
+        min-height: 145px;
+        padding: 28px var(--container-padding);
+    }
+
+    .contact-caption-line {
+        height: 44px;
+    }
+
+    .contact-media-caption p {
+        font-size: 13px;
+    }
+}

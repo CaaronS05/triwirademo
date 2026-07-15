@@ -1,0 +1,1260 @@
+/* ==========================================================
+   BATU ALAM COLLECTION PAGE
+========================================================== */
+
+:root {
+    --batu-red: #e60012;
+    --batu-red-dark: #c90010;
+    --batu-black: #08090d;
+    --batu-text: #555862;
+    --batu-border: #d9d9d9;
+    --batu-soft: #f6f6f6;
+}
+
+.batu-page {
+    background-color: #ffffff;
+    color: var(--batu-black);
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.batu-page-container {
+    width: min(100% - 72px, 1460px);
+    margin-inline: auto;
+}
+
+.batu-main {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.batu-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+
+    background-color: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #eeeeee;
+    backdrop-filter: blur(14px);
+}
+
+.batu-header-container {
+    display: grid;
+    grid-template-columns: 220px 1fr 260px;
+    align-items: center;
+    gap: 30px;
+
+    width: min(100% - 72px, 1460px);
+    min-height: 76px;
+    margin-inline: auto;
+}
+
+.batu-header-logo-link {
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+}
+
+.batu-header-logo {
+    display: block;
+
+    width: 118px;
+    height: auto;
+}
+
+.batu-header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 42px;
+}
+
+.batu-header-nav a {
+    position: relative;
+
+    color: #111216;
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.batu-header-nav a.is-active {
+    color: var(--batu-red);
+}
+
+.batu-header-nav a.is-active::after {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    left: 0;
+
+    height: 3px;
+
+    background-color: var(--batu-red);
+
+    content: "";
+}
+
+.batu-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+.batu-header-language {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #111216;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.batu-header-language a {
+    color: #111216;
+}
+
+.batu-header-language a.is-active {
+    color: var(--batu-red);
+}
+
+.batu-header-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    padding: 10px 20px;
+
+    background-color: var(--batu-red);
+    border-radius: 3px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.batu-menu-button {
+    display: none;
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.batu-hero-section {
+    width: 100%;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.batu-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+
+    padding-top: 27px;
+
+    color: #777a82;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.batu-breadcrumb a {
+    color: #777a82;
+}
+
+.batu-breadcrumb strong {
+    color: var(--batu-red);
+}
+
+.batu-hero-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(400px, 0.82fr) minmax(0, 1.18fr);
+    align-items: stretch;
+
+    min-height: 365px;
+    margin-top: 24px;
+}
+
+.batu-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding:
+        25px 54px 48px 0;
+}
+
+.batu-hero-eyebrow {
+    margin: 0 0 11px;
+
+    color: var(--batu-red);
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.batu-hero-title {
+    margin: 0;
+
+    color: var(--batu-black);
+
+    font-size: clamp(50px, 5vw, 76px);
+    font-weight: 800;
+    line-height: 1.03;
+    letter-spacing: -3px;
+}
+
+.batu-hero-description {
+    max-width: 650px;
+    margin: 24px 0 0;
+
+    color: var(--batu-text);
+
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.batu-hero-note {
+    max-width: 530px;
+    margin: 20px 0 0;
+
+    color: #555862;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.batu-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.batu-hero-primary,
+.batu-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 51px;
+    padding: 13px 27px;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.batu-hero-primary {
+    background-color: var(--batu-red);
+    border: 1px solid var(--batu-red);
+
+    color: #ffffff;
+}
+
+.batu-hero-secondary {
+    background-color: #ffffff;
+    border: 1px solid var(--batu-red);
+
+    color: var(--batu-red);
+}
+
+.batu-hero-visual {
+    position: relative;
+
+    height: 365px;
+    min-height: 365px;
+
+    overflow: hidden;
+}
+
+.batu-hero-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.batu-hero-chevron {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -38px;
+
+    width: 150px;
+
+    pointer-events: none;
+}
+
+.batu-hero-chevron-top,
+.batu-hero-chevron-bottom {
+    position: absolute;
+    left: 55px;
+
+    width: 36px;
+    height: 58%;
+
+    background: linear-gradient(180deg, #ff1e11, #d80012);
+}
+
+.batu-hero-chevron-top {
+    top: -28px;
+
+    transform: rotate(-34deg);
+    transform-origin: bottom center;
+}
+
+.batu-hero-chevron-bottom {
+    bottom: -28px;
+
+    transform: rotate(34deg);
+    transform-origin: top center;
+}
+
+
+/* ==========================================================
+   COLLECTION
+========================================================== */
+
+.batu-collection-section {
+    padding:
+        26px 0 26px;
+
+    background-color: #ffffff;
+}
+
+.batu-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+
+    width: 100%;
+}
+
+.batu-filter-button {
+    min-height: 46px;
+    padding: 10px 28px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--batu-border);
+
+    color: #353841;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.batu-filter-button.is-active {
+    background-color: var(--batu-red);
+    border-color: var(--batu-red);
+
+    color: #ffffff;
+}
+
+.batu-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 16px;
+
+    margin-top: 18px;
+}
+
+.batu-spec-item {
+    display: flex;
+    align-items: center;
+
+    min-height: 50px;
+    padding: 12px 20px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--batu-border);
+    border-radius: 5px;
+
+    color: #50535c;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.batu-section-header {
+    margin:
+        29px 0 15px;
+}
+
+.batu-section-header h2 {
+    margin: 0;
+
+    color: var(--batu-black);
+
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.9px;
+}
+
+
+/* ==========================================================
+   GALLERY
+========================================================== */
+
+.batu-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.batu-product-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    background-color: #ffffff;
+    border: 1px solid var(--batu-border);
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        border-color 180ms ease;
+}
+
+.batu-product-card:hover {
+    border-color: rgba(230, 0, 18, 0.45);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+
+    transform: translateY(-4px);
+}
+
+.batu-product-card img {
+    display: block;
+
+    width: 100%;
+    height: 150px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.batu-product-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding:
+        13px 13px 14px;
+}
+
+.batu-product-content h3 {
+    margin: 0;
+
+    color: #18191d;
+
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.batu-product-content p {
+    margin: 5px 0 0;
+
+    color: #555862;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.batu-product-content span {
+    margin-top: 3px;
+
+    color: #555862;
+
+    font-size: 11px;
+}
+
+.batu-product-content small {
+    margin-top: 7px;
+
+    color: #555862;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.batu-product-content a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 37px;
+    margin-top: 13px;
+    padding: 9px 12px;
+
+    border: 1px solid var(--batu-red);
+    border-radius: 4px;
+
+    color: var(--batu-red);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.batu-product-content a:hover {
+    background-color: var(--batu-red);
+
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   HIGHLIGHTS
+========================================================== */
+
+.batu-highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+
+    margin-top: 24px;
+}
+
+.batu-highlight-card {
+    padding: 25px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--batu-border);
+    border-radius: 8px;
+}
+
+.batu-highlight-card h3 {
+    margin: 0;
+
+    color: var(--batu-red);
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+}
+
+.batu-highlight-card p {
+    max-width: 360px;
+    margin: 12px 0 0;
+
+    color: #555862;
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.batu-highlight-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+
+    margin-top: 19px;
+}
+
+.batu-highlight-images img {
+    width: 100%;
+    height: 96px;
+
+    border-radius: 4px;
+
+    object-fit: cover;
+}
+
+.batu-highlight-card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 220px;
+    min-height: 42px;
+    margin:
+        18px auto 0;
+
+    border: 1px solid var(--batu-red);
+    border-radius: 4px;
+
+    color: var(--batu-red);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   FEATURE PANEL
+========================================================== */
+
+.batu-feature-panel {
+    display: grid;
+    grid-template-columns:
+        44px minmax(0, 1.2fr) minmax(260px, 0.8fr) 90px 44px;
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 24px;
+    padding: 16px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--batu-border);
+    border-radius: 8px;
+}
+
+.batu-feature-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--batu-border);
+    border-radius: 50%;
+
+    color: #333;
+
+    font-size: 32px;
+    line-height: 1;
+}
+
+.batu-feature-main-image {
+    width: 100%;
+    height: 185px;
+
+    border-radius: 5px;
+
+    object-fit: cover;
+}
+
+.batu-feature-content h3 {
+    margin: 0;
+
+    color: #111216;
+
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.batu-feature-content p,
+.batu-feature-content span,
+.batu-feature-content small {
+    display: block;
+
+    color: #555862;
+}
+
+.batu-feature-content p {
+    margin: 8px 0 0;
+
+    font-size: 13px;
+}
+
+.batu-feature-content span {
+    margin-top: 4px;
+
+    font-size: 13px;
+}
+
+.batu-feature-content small {
+    max-width: 380px;
+    margin-top: 9px;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.batu-feature-content a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 40px;
+    margin-top: 14px;
+    padding: 10px 22px;
+
+    background-color: var(--batu-red);
+    border-radius: 4px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.batu-feature-thumbnails {
+    display: grid;
+    gap: 8px;
+}
+
+.batu-feature-thumbnails img {
+    width: 100%;
+    height: 82px;
+
+    border-radius: 4px;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================================
+   GUIDE
+========================================================== */
+
+.batu-guide-section {
+    margin-top: 27px;
+}
+
+.batu-guide-section h2 {
+    margin: 0 0 15px;
+
+    color: var(--batu-black);
+
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.batu-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.batu-guide-card {
+    min-height: 118px;
+    padding: 22px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--batu-border);
+    border-radius: 7px;
+}
+
+.batu-guide-card h3 {
+    margin: 0;
+
+    color: #18191d;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.batu-guide-card p {
+    margin: 9px 0 0;
+
+    color: #555862;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.batu-guide-note {
+    margin-top: 16px;
+    padding: 13px 18px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--batu-border);
+    border-radius: 5px;
+
+    color: #555862;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   APPLICATION CTA
+========================================================== */
+
+.batu-application-cta {
+    position: relative;
+
+    background-color: #0a0b0d;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+.batu-application-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr) 110px minmax(300px, 0.45fr);
+    align-items: center;
+    gap: 38px;
+
+    min-height: 210px;
+    padding:
+        24px 0;
+}
+
+.batu-application-content h2 {
+    margin: 0 0 14px;
+
+    color: #ffffff;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.batu-application-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.batu-application-grid article {
+    background-color: #ffffff;
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.batu-application-grid img {
+    display: block;
+
+    width: 100%;
+    height: 80px;
+
+    object-fit: cover;
+}
+
+.batu-application-grid span {
+    display: block;
+
+    padding: 9px 8px;
+
+    color: #18191d;
+
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.batu-application-content p {
+    margin: 10px 0 0;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 11px;
+}
+
+.batu-application-chevron {
+    position: relative;
+
+    width: 110px;
+    height: 230px;
+
+    pointer-events: none;
+}
+
+.batu-application-chevron-top,
+.batu-application-chevron-bottom {
+    position: absolute;
+    left: 39px;
+
+    width: 30px;
+    height: 133px;
+
+    background: linear-gradient(180deg, #ff1e11, #d80012);
+}
+
+.batu-application-chevron-top {
+    top: -12px;
+
+    transform: rotate(-34deg);
+    transform-origin: bottom center;
+}
+
+.batu-application-chevron-bottom {
+    bottom: -12px;
+
+    transform: rotate(34deg);
+    transform-origin: top center;
+}
+
+.batu-cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.batu-cta-primary,
+.batu-cta-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+    padding: 12px 18px;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.batu-cta-primary {
+    background-color: var(--batu-red);
+
+    color: #ffffff;
+}
+
+.batu-cta-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.75);
+
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   RELATED LINKS
+========================================================== */
+
+.batu-related-links {
+    padding:
+        22px 0;
+
+    background-color: #ffffff;
+}
+
+.batu-related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.batu-related-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 72px;
+    padding: 18px 22px;
+
+    border: 1px solid var(--batu-border);
+    border-radius: 6px;
+
+    color: #18191d;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.batu-related-grid span {
+    color: var(--batu-red);
+
+    font-size: 24px;
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.batu-footer {
+    position: relative;
+
+    padding:
+        42px 0 24px;
+
+    background-color: #08090d;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+.batu-footer-layout {
+    position: relative;
+
+    display: grid;
+    grid-template-columns:
+        minmax(240px, 1.15fr) minmax(150px, 0.7fr) minmax(220px, 0.9fr) minmax(210px, 0.8fr) 90px;
+    gap: 42px;
+}
+
+.batu-footer-logo {
+    width: 115px;
+    height: auto;
+
+    filter: brightness(0) invert(1);
+}
+
+.batu-footer-brand p {
+    max-width: 330px;
+    margin: 18px 0 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.batu-footer-column,
+.batu-footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.batu-footer-column h2,
+.batu-footer-contact h2 {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.batu-footer-column a,
+.batu-footer-contact p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 12px;
+}
+
+.batu-footer-language {
+    margin-top: 14px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.batu-footer-chevron {
+    position: relative;
+
+    width: 90px;
+    height: 220px;
+
+    pointer-events: none;
+}
+
+.batu-footer-chevron-top,
+.batu-footer-chevron-bottom {
+    position: absolute;
+    left: 31px;
+
+    width: 28px;
+    height: 130px;
+
+    background: linear-gradient(180deg, #ff1e11, #d80012);
+}
+
+.batu-footer-chevron-top {
+    top: -10px;
+
+    transform: rotate(-34deg);
+    transform-origin: bottom center;
+}
+
+.batu-footer-chevron-bottom {
+    bottom: -10px;
+
+    transform: rotate(34deg);
+    transform-origin: top center;
+}
+
+.batu-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    margin-top: 36px;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.batu-footer-bottom p,
+.batu-footer-bottom a,
+.batu-footer-bottom span {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1200px) {
+    .batu-gallery-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .batu-spec-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .batu-application-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .batu-application-chevron {
+        display: none;
+    }
+
+    .batu-related-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .batu-footer-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .batu-footer-chevron {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .batu-header-container {
+        grid-template-columns: 1fr auto;
+    }
+
+    .batu-header-nav {
+        display: none;
+    }
+
+    .batu-header-language,
+    .batu-header-button {
+        display: none;
+    }
+
+    .batu-menu-button {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        width: 36px;
+
+        background: transparent;
+        border: 0;
+    }
+
+    .batu-menu-button span {
+        width: 100%;
+        height: 2px;
+
+        background-color: #111;
+    }
+
+    .batu-hero-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .batu-hero-content {
+        padding-right: 0;
+    }
+
+    .batu-hero-visual {
+        height: 310px;
+        min-height: 310px;
+    }
+
+    .batu-gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .batu-highlight-grid,
+    .batu-guide-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .batu-feature-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .batu-feature-arrow,
+    .batu-feature-thumbnails {
+        display: none;
+    }
+
+    .batu-application-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .batu-page-container {
+        width: min(100% - 36px, 1460px);
+    }
+
+    .batu-header-container {
+        width: min(100% - 36px, 1460px);
+    }
+
+    .batu-hero-title {
+        font-size: 43px;
+    }
+
+    .batu-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .batu-filter-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .batu-spec-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .batu-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .batu-related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .batu-footer-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .batu-footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,547 @@
+/* ==========================================================
+   STAGE 10 — FOOTER FLOORING & NATURAL STONE
+========================================================== */
+
+.flooring-footer {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    padding:
+        58px 0 23px;
+
+    background-color: #090b0c;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+.flooring-footer-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    background:
+        radial-gradient(circle at 14% 23%,
+            rgba(255, 255, 255, 0.045),
+            transparent 31%),
+        radial-gradient(circle at 86% 72%,
+            rgba(255, 255, 255, 0.03),
+            transparent 35%),
+        linear-gradient(112deg,
+            rgba(255, 255, 255, 0.014),
+            rgba(0, 0, 0, 0.24),
+            rgba(255, 255, 255, 0.01)),
+        #090b0c;
+}
+
+.flooring-footer-background::before {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        repeating-linear-gradient(18deg,
+            transparent 0,
+            transparent 34px,
+            rgba(255, 255, 255, 0.012) 35px,
+            transparent 36px),
+        repeating-linear-gradient(-25deg,
+            transparent 0,
+            transparent 58px,
+            rgba(255, 255, 255, 0.01) 59px,
+            transparent 60px);
+
+    content: "";
+
+    opacity: 0.8;
+}
+
+
+/* ==========================================================
+   FOOTER LAYOUT
+========================================================== */
+
+.flooring-footer-layout {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns:
+        minmax(245px, 1.25fr) minmax(125px, 0.58fr) minmax(210px, 0.95fr) minmax(255px, 1.12fr) 88px;
+    align-items: start;
+    gap: clamp(32px, 4vw, 65px);
+
+    width: 100%;
+}
+
+
+/* ==========================================================
+   BRAND
+========================================================== */
+
+.flooring-footer-brand {
+    min-width: 0;
+}
+
+.flooring-footer-logo-link {
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+    max-width: 220px;
+}
+
+.flooring-footer-logo {
+    display: block;
+
+    width: 100%;
+    max-width: 205px;
+    height: auto;
+
+    filter: brightness(0) invert(1);
+}
+
+.flooring-footer-description {
+    max-width: 320px;
+    margin: 23px 0 0;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.flooring-footer-contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 148px;
+    min-height: 43px;
+    margin-top: 21px;
+    padding:
+        10px 18px;
+
+    background-color: var(--flooring-red);
+    border: 1px solid var(--flooring-red);
+    border-radius: 4px;
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.flooring-footer-contact-button:hover {
+    background-color: var(--flooring-red-dark);
+    border-color: var(--flooring-red-dark);
+    box-shadow: 0 10px 24px rgba(230, 0, 18, 0.2);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   FOOTER COLUMNS
+========================================================== */
+
+.flooring-footer-column,
+.flooring-footer-contact {
+    min-width: 0;
+}
+
+.flooring-footer-heading {
+    margin: 0 0 18px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 1.35px;
+    text-transform: uppercase;
+}
+
+.flooring-footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.flooring-footer-links a {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    transition:
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+.flooring-footer-links a::before {
+    margin-right: 7px;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    content: "•";
+}
+
+.flooring-footer-links a:hover,
+.flooring-footer-links a.is-active {
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+.flooring-footer-links a.is-active::before {
+    color: var(--flooring-red);
+}
+
+
+/* ==========================================================
+   CONTACT
+========================================================== */
+
+.flooring-footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.flooring-footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+a.flooring-footer-contact-item {
+    transition:
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+a.flooring-footer-contact-item:hover {
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+.flooring-footer-contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    width: 27px;
+    height: 27px;
+
+    color: #ffffff;
+}
+
+.flooring-footer-contact-icon svg,
+.flooring-footer-contact-icon img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ==========================================================
+   LANGUAGE
+========================================================== */
+
+.flooring-footer-language {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    width: fit-content;
+    margin-top: 22px;
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.flooring-footer-language a,
+.flooring-footer-language span {
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.flooring-footer-language a {
+    transition: color 180ms ease;
+}
+
+.flooring-footer-language a:hover,
+.flooring-footer-language a.is-active {
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   CHEVRON COLUMN
+   Memiliki area grid sendiri agar tidak menabrak teks.
+========================================================== */
+
+.flooring-footer-shape {
+    position: relative;
+
+    width: 88px;
+    height: 225px;
+
+    align-self: center;
+
+    pointer-events: none;
+}
+
+.flooring-footer-shape-top,
+.flooring-footer-shape-bottom {
+    position: absolute;
+    left: 30px;
+
+    width: 27px;
+    height: 135px;
+
+    background:
+        linear-gradient(180deg,
+            #ff2c19 0%,
+            #d90e0e 100%);
+}
+
+.flooring-footer-shape-top {
+    top: -12px;
+
+    transform: rotate(-34deg);
+    transform-origin: bottom center;
+}
+
+.flooring-footer-shape-bottom {
+    bottom: -12px;
+
+    transform: rotate(34deg);
+    transform-origin: top center;
+}
+
+
+/* ==========================================================
+   FOOTER BOTTOM
+========================================================== */
+
+.flooring-footer-bottom {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    width: 100%;
+    margin-top: 42px;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.flooring-footer-bottom p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.flooring-footer-legal {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.flooring-footer-legal a,
+.flooring-footer-legal span {
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.flooring-footer-legal a {
+    transition: color 180ms ease;
+}
+
+.flooring-footer-legal a:hover {
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   LARGE LAPTOP
+========================================================== */
+
+@media (max-width: 1380px) {
+    .flooring-footer-layout {
+        grid-template-columns:
+            minmax(210px, 1.2fr) minmax(105px, 0.55fr) minmax(175px, 0.9fr) minmax(215px, 1.08fr) 70px;
+        gap: 34px;
+    }
+
+    .flooring-footer-logo {
+        max-width: 180px;
+    }
+
+    .flooring-footer-description {
+        font-size: 11px;
+    }
+
+    .flooring-footer-shape {
+        width: 70px;
+        height: 205px;
+    }
+
+    .flooring-footer-shape-top,
+    .flooring-footer-shape-bottom {
+        left: 24px;
+
+        width: 23px;
+        height: 122px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1080px) {
+    .flooring-footer-layout {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap:
+            46px 55px;
+    }
+
+    .flooring-footer-brand {
+        max-width: 440px;
+    }
+
+    .flooring-footer-shape {
+        position: absolute;
+        right: 35px;
+        bottom: -15px;
+
+        width: 70px;
+
+        opacity: 0.18;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 760px) {
+    .flooring-footer {
+        padding-top: 50px;
+    }
+
+    .flooring-footer-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .flooring-footer-description {
+        max-width: 520px;
+
+        font-size: 12px;
+    }
+
+    .flooring-footer-shape {
+        right: -15px;
+        bottom: -35px;
+
+        opacity: 0.14;
+    }
+
+    .flooring-footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+
+        margin-top: 36px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 560px) {
+    .flooring-footer {
+        padding:
+            44px 0 21px;
+    }
+
+    .flooring-footer-layout {
+        gap: 31px;
+    }
+
+    .flooring-footer-logo {
+        max-width: 170px;
+    }
+
+    .flooring-footer-description {
+        margin-top: 19px;
+
+        font-size: 11px;
+    }
+
+    .flooring-footer-heading {
+        margin-bottom: 15px;
+    }
+
+    .flooring-footer-contact-item {
+        font-size: 11px;
+    }
+
+    .flooring-footer-shape {
+        display: none;
+    }
+
+    .flooring-footer-bottom {
+        margin-top: 32px;
+    }
+}

@@ -1,0 +1,826 @@
+/* ==========================================================
+   STAGE 9 — CTA DAN PRODUK TERKAIT
+========================================================== */
+
+
+/* ==========================================================
+   CTA SECTION
+========================================================== */
+
+.flooring-cta-section {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    padding:
+        clamp(55px, 5.5vw, 80px) 0;
+
+    background-color: #090b0c;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+.flooring-cta-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    background:
+        radial-gradient(circle at 15% 30%,
+            rgba(255, 255, 255, 0.05),
+            transparent 31%),
+        radial-gradient(circle at 86% 72%,
+            rgba(255, 255, 255, 0.035),
+            transparent 34%),
+        linear-gradient(110deg,
+            rgba(255, 255, 255, 0.015),
+            rgba(0, 0, 0, 0.22),
+            rgba(255, 255, 255, 0.01)),
+        #090b0c;
+}
+
+.flooring-cta-background::before {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        repeating-linear-gradient(18deg,
+            transparent 0,
+            transparent 33px,
+            rgba(255, 255, 255, 0.013) 34px,
+            transparent 35px),
+        repeating-linear-gradient(-25deg,
+            transparent 0,
+            transparent 58px,
+            rgba(255, 255, 255, 0.011) 59px,
+            transparent 60px);
+
+    content: "";
+
+    opacity: 0.85;
+}
+
+
+/* ==========================================================
+   CTA LAYOUT
+========================================================== */
+
+.flooring-cta-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr) 100px minmax(330px, 0.65fr);
+    align-items: center;
+    gap: clamp(35px, 4vw, 65px);
+
+    width: 100%;
+    min-height: 170px;
+}
+
+
+/* ==========================================================
+   CTA CONTENT
+========================================================== */
+
+.flooring-cta-content {
+    min-width: 0;
+    max-width: 700px;
+}
+
+.flooring-cta-eyebrow {
+    margin: 0 0 12px;
+
+    color: #ff3a45;
+
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.flooring-cta-title {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(36px, 3.5vw, 53px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -2px;
+}
+
+.flooring-cta-description {
+    max-width: 670px;
+    margin: 18px 0 0;
+
+    color: rgba(255, 255, 255, 0.74);
+
+    font-size: clamp(12px, 1vw, 15px);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   CTA CHEVRON COLUMN
+   Memiliki kolom sendiri sehingga tidak menimpa tulisan.
+========================================================== */
+
+.flooring-cta-shape {
+    position: relative;
+
+    width: 100px;
+    height: 210px;
+
+    pointer-events: none;
+}
+
+.flooring-cta-shape-top,
+.flooring-cta-shape-bottom {
+    position: absolute;
+    left: 36px;
+
+    width: 28px;
+    height: 126px;
+
+    background:
+        linear-gradient(180deg,
+            #ff2c19 0%,
+            #d90e0e 100%);
+}
+
+.flooring-cta-shape-top {
+    top: -12px;
+
+    transform: rotate(-34deg);
+    transform-origin: bottom center;
+}
+
+.flooring-cta-shape-bottom {
+    bottom: -12px;
+
+    transform: rotate(34deg);
+    transform-origin: top center;
+}
+
+
+/* ==========================================================
+   CTA ACTIONS
+========================================================== */
+
+.flooring-cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    width: 100%;
+    max-width: 420px;
+
+    justify-self: end;
+}
+
+.flooring-cta-primary,
+.flooring-cta-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 58px;
+    padding:
+        13px 21px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.flooring-cta-primary {
+    gap: 12px;
+
+    background:
+        linear-gradient(105deg,
+            #ff2918 0%,
+            #df130d 100%);
+
+    border: 1px solid #ff2918;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 12px 28px rgba(230, 0, 18, 0.18);
+}
+
+.flooring-cta-primary svg,
+.flooring-cta-primary img {
+    flex: 0 0 auto;
+
+    width: 29px;
+    height: 29px;
+}
+
+.flooring-cta-primary:hover {
+    background:
+        linear-gradient(105deg,
+            #e71f11 0%,
+            #c80f0a 100%);
+
+    border-color: #e71f11;
+    box-shadow: 0 16px 35px rgba(230, 0, 18, 0.27);
+
+    transform: translateY(-3px);
+}
+
+.flooring-cta-secondary {
+    background-color: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.82);
+
+    color: #ffffff;
+}
+
+.flooring-cta-secondary:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+
+    color: #111216;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================================
+   RELATED PRODUCTS
+========================================================== */
+
+.flooring-related-section {
+    width: 100%;
+    padding:
+        clamp(56px, 5.8vw, 84px) 0 clamp(66px, 6.8vw, 98px);
+
+    background-color: #ffffff;
+}
+
+
+/* ==========================================================
+   RELATED HEADER
+========================================================== */
+
+.flooring-related-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 34px;
+
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.flooring-related-title {
+    margin: 0;
+
+    color: var(--flooring-black);
+
+    font-size: clamp(29px, 2.5vw, 39px);
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -1.35px;
+}
+
+.flooring-related-subtitle {
+    max-width: 470px;
+    margin: 0;
+
+    color: var(--flooring-text);
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.7;
+    text-align: right;
+}
+
+
+/* ==========================================================
+   RELATED GRID
+========================================================== */
+
+.flooring-related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(18px, 1.8vw, 28px);
+
+    width: 100%;
+}
+
+
+/* ==========================================================
+   RELATED CARD
+========================================================== */
+
+.flooring-related-card {
+    display: grid;
+    grid-template-columns:
+        minmax(175px, 0.9fr) minmax(220px, 1.1fr);
+
+    min-width: 0;
+    min-height: 245px;
+
+    background-color: #ffffff;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    transition:
+        border-color 220ms ease,
+        box-shadow 220ms ease,
+        transform 220ms ease;
+}
+
+.flooring-related-card:hover {
+    border-color: rgba(230, 0, 18, 0.42);
+    box-shadow: 0 17px 38px rgba(0, 0, 0, 0.08);
+
+    transform: translateY(-5px);
+}
+
+
+/* ==========================================================
+   RELATED MEDIA
+========================================================== */
+
+.flooring-related-media {
+    position: relative;
+
+    display: block;
+
+    min-width: 0;
+    min-height: 245px;
+
+    background-color: #eeeeee;
+
+    overflow: hidden;
+}
+
+.flooring-related-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 650ms ease;
+}
+
+.flooring-related-card:hover .flooring-related-image {
+    transform: scale(1.05);
+}
+
+.flooring-related-image-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.04),
+            transparent 45%,
+            rgba(0, 0, 0, 0.35));
+
+    pointer-events: none;
+}
+
+.flooring-related-category {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+
+    display: inline-flex;
+    align-items: center;
+
+    max-width: calc(100% - 28px);
+    min-height: 28px;
+    padding:
+        6px 10px;
+
+    background-color: rgba(8, 9, 11, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 3px;
+
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+
+/* ==========================================================
+   RELATED CONTENT
+========================================================== */
+
+.flooring-related-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-width: 0;
+    padding:
+        27px 24px 23px;
+}
+
+.flooring-related-copy {
+    min-width: 0;
+}
+
+.flooring-related-card-title {
+    margin: 0;
+
+    color: #111216;
+
+    font-size: clamp(17px, 1.3vw, 21px);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.4px;
+}
+
+.flooring-related-description {
+    margin: 13px 0 0;
+
+    color: #55575d;
+
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.68;
+}
+
+
+/* ==========================================================
+   RELATED BUTTON
+========================================================== */
+
+.flooring-related-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+
+    width: 100%;
+    min-height: 43px;
+    margin-top: 21px;
+    padding:
+        10px 14px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--flooring-red);
+    border-radius: 4px;
+
+    color: var(--flooring-red);
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    transition:
+        background-color 180ms ease,
+        color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.flooring-related-button svg {
+    flex: 0 0 auto;
+
+    width: 19px;
+    height: 19px;
+
+    transition: transform 180ms ease;
+}
+
+.flooring-related-button:hover {
+    background-color: var(--flooring-red);
+    box-shadow: 0 10px 24px rgba(230, 0, 18, 0.17);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+.flooring-related-button:hover svg {
+    transform: translateX(4px);
+}
+
+
+/* ==========================================================
+   LARGE LAPTOP
+========================================================== */
+
+@media (max-width: 1380px) {
+    .flooring-cta-layout {
+        grid-template-columns:
+            minmax(0, 1fr) 82px minmax(300px, 0.65fr);
+        gap: 35px;
+    }
+
+    .flooring-cta-title {
+        font-size: 44px;
+    }
+
+    .flooring-cta-shape {
+        width: 82px;
+        height: 190px;
+    }
+
+    .flooring-cta-shape-top,
+    .flooring-cta-shape-bottom {
+        left: 29px;
+
+        width: 24px;
+        height: 112px;
+    }
+
+    .flooring-related-grid {
+        gap: 16px;
+    }
+
+    .flooring-related-card {
+        grid-template-columns:
+            minmax(140px, 0.84fr) minmax(180px, 1.16fr);
+
+        min-height: 220px;
+    }
+
+    .flooring-related-media {
+        min-height: 220px;
+    }
+
+    .flooring-related-content {
+        padding:
+            22px 18px 20px;
+    }
+
+    .flooring-related-card-title {
+        font-size: 16px;
+    }
+
+    .flooring-related-description {
+        font-size: 10px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1080px) {
+    .flooring-cta-layout {
+        grid-template-columns:
+            minmax(0, 1fr) minmax(310px, 0.7fr);
+        gap: 60px;
+    }
+
+    .flooring-cta-shape {
+        display: none;
+    }
+
+    .flooring-related-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 11px;
+    }
+
+    .flooring-related-subtitle {
+        max-width: 650px;
+
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .flooring-related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flooring-related-card {
+        grid-template-columns:
+            minmax(245px, 0.78fr) minmax(370px, 1.22fr);
+
+        min-height: 260px;
+    }
+
+    .flooring-related-media {
+        min-height: 260px;
+    }
+
+    .flooring-related-content {
+        padding:
+            34px 38px 30px;
+    }
+
+    .flooring-related-card-title {
+        font-size: 23px;
+    }
+
+    .flooring-related-description {
+        max-width: 520px;
+
+        font-size: 13px;
+    }
+
+    .flooring-related-button {
+        max-width: 245px;
+        min-height: 46px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 820px) {
+    .flooring-cta-section {
+        padding:
+            62px 0;
+    }
+
+    .flooring-cta-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .flooring-cta-content {
+        max-width: 660px;
+    }
+
+    .flooring-cta-title {
+        font-size: clamp(39px, 7vw, 50px);
+    }
+
+    .flooring-cta-actions {
+        max-width: 480px;
+
+        justify-self: start;
+    }
+
+    .flooring-related-section {
+        padding:
+            55px 0 72px;
+    }
+
+    .flooring-related-title {
+        font-size: 37px;
+        letter-spacing: -1.2px;
+    }
+
+    .flooring-related-card {
+        grid-template-columns:
+            minmax(195px, 0.82fr) minmax(270px, 1.18fr);
+    }
+
+    .flooring-related-content {
+        padding:
+            28px 25px 25px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 560px) {
+    .flooring-cta-section {
+        padding:
+            50px 0;
+    }
+
+    .flooring-cta-layout {
+        gap: 31px;
+    }
+
+    .flooring-cta-title {
+        font-size: 33px;
+        line-height: 1.17;
+        letter-spacing: -1.3px;
+    }
+
+    .flooring-cta-description {
+        margin-top: 16px;
+
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .flooring-cta-primary,
+    .flooring-cta-secondary {
+        min-height: 55px;
+
+        font-size: 12px;
+    }
+
+    .flooring-cta-primary svg {
+        width: 27px;
+        height: 27px;
+    }
+
+    .flooring-related-section {
+        padding:
+            48px 0 63px;
+    }
+
+    .flooring-related-header {
+        margin-bottom: 21px;
+    }
+
+    .flooring-related-title {
+        font-size: 31px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    .flooring-related-subtitle {
+        font-size: 12px;
+    }
+
+    .flooring-related-grid {
+        gap: 14px;
+    }
+
+    .flooring-related-card {
+        display: flex;
+        flex-direction: column;
+
+        min-height: 0;
+    }
+
+    .flooring-related-media {
+        width: 100%;
+        min-height: 220px;
+        height: 220px;
+    }
+
+    .flooring-related-content {
+        padding:
+            23px 21px 24px;
+    }
+
+    .flooring-related-card-title {
+        font-size: 20px;
+    }
+
+    .flooring-related-description {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .flooring-related-button {
+        max-width: none;
+        margin-top: 20px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 390px) {
+    .flooring-cta-title {
+        font-size: 29px;
+    }
+
+    .flooring-cta-primary {
+        gap: 9px;
+
+        font-size: 11px;
+    }
+
+    .flooring-related-title {
+        font-size: 28px;
+    }
+
+    .flooring-related-media {
+        min-height: 190px;
+        height: 190px;
+    }
+
+    .flooring-related-content {
+        padding-inline: 18px;
+    }
+}

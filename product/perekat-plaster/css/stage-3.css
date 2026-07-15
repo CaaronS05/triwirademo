@@ -1,0 +1,471 @@
+/* ==========================================================
+   STAGE 3 — PILIHAN PRODUK PEREKAT & PLASTER
+========================================================== */
+
+.perekat-options-section {
+    width: 100%;
+    padding:
+        clamp(70px, 7vw, 104px) 0 clamp(78px, 8vw, 116px);
+
+    background-color: #ffffff;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.perekat-options-header {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.perekat-options-title {
+    margin: 0;
+
+    color: var(--perekat-black);
+
+    font-size: clamp(34px, 3.2vw, 48px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1.7px;
+}
+
+
+/* ==========================================================
+   PRODUCT GRID
+========================================================== */
+
+.perekat-options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(22px, 2.2vw, 34px);
+
+    width: 100%;
+}
+
+
+/* ==========================================================
+   PRODUCT CARD
+========================================================== */
+
+.perekat-option-card {
+    display: grid;
+    grid-template-columns:
+        minmax(210px, 0.88fr) minmax(280px, 1.12fr);
+
+    min-width: 0;
+    min-height: 330px;
+
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    transition:
+        border-color 220ms ease,
+        box-shadow 220ms ease,
+        transform 220ms ease;
+}
+
+.perekat-option-card:hover {
+    border-color: rgba(239, 0, 0, 0.42);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.08);
+
+    transform: translateY(-5px);
+}
+
+
+/* ==========================================================
+   PRODUCT IMAGE
+========================================================== */
+
+.perekat-option-media {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    min-height: 330px;
+    padding:
+        30px 24px;
+
+    background:
+        linear-gradient(145deg,
+            #ffffff 0%,
+            #f7f7f7 100%);
+
+    overflow: hidden;
+}
+
+.perekat-option-decoration {
+    position: absolute;
+    top: 23px;
+    left: 23px;
+
+    width: 56px;
+    height: 56px;
+
+    background-image:
+        radial-gradient(circle,
+            rgba(239, 0, 0, 0.3) 1.5px,
+            transparent 1.7px);
+    background-size: 9px 9px;
+
+    opacity: 0.45;
+
+    pointer-events: none;
+}
+
+.perekat-option-image {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    width: 100%;
+    max-width: 190px;
+    height: 265px;
+
+    object-fit: contain;
+    object-position: center;
+
+    filter: drop-shadow(0 14px 14px rgba(0, 0, 0, 0.12));
+
+    transition: transform 450ms ease;
+}
+
+.perekat-option-card:hover .perekat-option-image {
+    transform:
+        translateY(-4px) scale(1.025);
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.perekat-option-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+    padding:
+        38px 36px 34px 20px;
+}
+
+.perekat-option-copy {
+    min-width: 0;
+}
+
+.perekat-option-name {
+    margin: 0;
+
+    color: var(--perekat-black);
+
+    font-size: clamp(20px, 1.6vw, 25px);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+}
+
+.perekat-option-brand {
+    margin: 10px 0 0;
+
+    color: #565656;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.perekat-option-description {
+    max-width: 390px;
+    margin: 16px 0 0;
+
+    color: #454545;
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   PRODUCT BUTTON
+========================================================== */
+
+.perekat-option-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+
+    width: 100%;
+    max-width: 270px;
+    min-height: 49px;
+    margin-top: 27px;
+    padding:
+        11px 16px;
+
+    background-color: #ffffff;
+    border: 1px solid var(--perekat-red);
+    border-radius: 4px;
+
+    color: var(--perekat-red);
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.perekat-option-button svg {
+    flex: 0 0 auto;
+
+    width: 21px;
+    height: 21px;
+
+    transition: transform 180ms ease;
+}
+
+.perekat-option-button:hover {
+    background-color: var(--perekat-red);
+    border-color: var(--perekat-red);
+    box-shadow: 0 11px 25px rgba(239, 0, 0, 0.17);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+.perekat-option-button:hover svg {
+    transform: translateX(4px);
+}
+
+
+/* ==========================================================
+   LARGE LAPTOP
+========================================================== */
+
+@media (max-width: 1380px) {
+    .perekat-option-card {
+        grid-template-columns:
+            minmax(175px, 0.82fr) minmax(235px, 1.18fr);
+
+        min-height: 300px;
+    }
+
+    .perekat-option-media {
+        min-height: 300px;
+        padding:
+            25px 18px;
+    }
+
+    .perekat-option-image {
+        max-width: 160px;
+        height: 235px;
+    }
+
+    .perekat-option-content {
+        padding:
+            32px 26px 30px 15px;
+    }
+
+    .perekat-option-name {
+        font-size: 20px;
+    }
+
+    .perekat-option-description {
+        font-size: 12px;
+    }
+
+    .perekat-option-button {
+        max-width: 240px;
+        margin-top: 23px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL LAPTOP
+========================================================== */
+
+@media (max-width: 1050px) {
+    .perekat-options-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .perekat-option-card {
+        grid-template-columns:
+            minmax(220px, 0.72fr) minmax(360px, 1.28fr);
+
+        min-height: 310px;
+    }
+
+    .perekat-option-media {
+        min-height: 310px;
+    }
+
+    .perekat-option-image {
+        max-width: 175px;
+        height: 250px;
+    }
+
+    .perekat-option-content {
+        padding:
+            38px 42px 34px 24px;
+    }
+
+    .perekat-option-name {
+        font-size: 23px;
+    }
+
+    .perekat-option-description {
+        max-width: 520px;
+
+        font-size: 14px;
+    }
+
+    .perekat-option-button {
+        max-width: 260px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 760px) {
+    .perekat-options-section {
+        padding:
+            64px 0 78px;
+    }
+
+    .perekat-options-header {
+        margin-bottom: 26px;
+    }
+
+    .perekat-options-title {
+        font-size: 40px;
+        letter-spacing: -1.4px;
+    }
+
+    .perekat-option-card {
+        grid-template-columns:
+            minmax(180px, 0.76fr) minmax(260px, 1.24fr);
+    }
+
+    .perekat-option-content {
+        padding:
+            30px 28px 29px 16px;
+    }
+
+    .perekat-option-description {
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 560px) {
+    .perekat-options-section {
+        padding:
+            52px 0 66px;
+    }
+
+    .perekat-options-title {
+        font-size: 34px;
+        line-height: 1.18;
+        letter-spacing: -1.2px;
+    }
+
+    .perekat-options-grid {
+        gap: 15px;
+    }
+
+    .perekat-option-card {
+        display: flex;
+        flex-direction: column;
+
+        min-height: 0;
+    }
+
+    .perekat-option-media {
+        min-height: 255px;
+        padding:
+            27px 22px 12px;
+    }
+
+    .perekat-option-image {
+        max-width: 155px;
+        height: 220px;
+    }
+
+    .perekat-option-content {
+        align-items: flex-start;
+
+        padding:
+            23px 23px 27px;
+    }
+
+    .perekat-option-name {
+        font-size: 21px;
+    }
+
+    .perekat-option-description {
+        margin-top: 14px;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .perekat-option-button {
+        max-width: none;
+        margin-top: 22px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 390px) {
+    .perekat-options-title {
+        font-size: 30px;
+    }
+
+    .perekat-option-content {
+        padding-inline: 19px;
+    }
+
+    .perekat-option-media {
+        min-height: 235px;
+    }
+
+    .perekat-option-image {
+        height: 200px;
+    }
+}
