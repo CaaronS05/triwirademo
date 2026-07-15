@@ -18,7 +18,7 @@
     width: 100%;
     z-index: 1000;
     color: var(--global-header-ink);
-    background: url("/assets/images/navbar/navbar-bg-desktop.jpg") center / cover no-repeat;
+    background: url("../assets/images/navbar/navbar-bg-desktop.jpg") center / cover no-repeat;
     border-bottom: 1px solid rgba(17, 24, 39, 0.08);
     box-shadow: 0 10px 26px rgba(15, 23, 42, 0.1);
     transition:
@@ -367,7 +367,7 @@ body.global-header-menu-open {
         right: 0;
         padding: 18px 24px 24px;
         gap: 6px;
-        background: url("/assets/images/navbar/navbar-bg-desktop.jpg") center / cover no-repeat;
+        background: url("../assets/images/navbar/navbar-bg-desktop.jpg") center / cover no-repeat;
         border-top: 1px solid rgba(15, 23, 42, 0.08);
         box-shadow: 0 28px 44px rgba(15, 23, 42, 0.16);
         opacity: 0;

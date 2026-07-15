@@ -16,7 +16,14 @@
             return "produk";
         }
 
-        if (["tentang", "produk", "layanan", "cakupan", "kontak"].includes(hash)) {
+        if ([
+            "tentang",
+            "produk",
+            "layanan",
+            "cakupan",
+            "lokasi",
+            "kontak"
+        ].includes(hash)) {
             return hash;
         }
 
@@ -144,24 +151,24 @@
             }
         });
 
-        // Smooth hide on scroll down, show on scroll up
         let lastScrollY = window.scrollY;
         let ticking = false;
-        const HIDE_THRESHOLD = 80; // start hiding after this many px scrolled
+        const HIDE_THRESHOLD = 80;
 
         window.addEventListener(
             "scroll",
             () => {
-                if (ticking) return;
+                if (ticking) {
+                    return;
+                }
+
                 ticking = true;
 
                 requestAnimationFrame(() => {
                     const currentY = window.scrollY;
 
-                    // maintain is-scrolled flag for styling (e.g., shadow)
                     header.classList.toggle("is-scrolled", currentY > 10);
 
-                    // don't hide header when mobile menu is open
                     if (document.body.classList.contains("global-header-menu-open")) {
                         header.classList.remove("is-hidden");
                         lastScrollY = currentY;
@@ -170,10 +177,8 @@
                     }
 
                     if (currentY > lastScrollY && currentY > HIDE_THRESHOLD) {
-                        // scrolling down
                         header.classList.add("is-hidden");
                     } else if (currentY < lastScrollY) {
-                        // scrolling up
                         header.classList.remove("is-hidden");
                     }
 

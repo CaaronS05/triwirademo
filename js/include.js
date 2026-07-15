@@ -1,6 +1,46 @@
 "use strict";
 
 (function initializeSectionLoader() {
+    const projectBasePath = (() => {
+        const scriptSource = document.currentScript?.src || "";
+
+        if (!scriptSource) {
+            return "";
+        }
+
+        const scriptPath = new URL(scriptSource, window.location.href).pathname;
+        const includeScriptPath = "/js/include.js";
+
+        if (!scriptPath.endsWith(includeScriptPath)) {
+            return "";
+        }
+
+        return scriptPath.slice(0, -includeScriptPath.length);
+    })();
+
+    function withProjectBase(path) {
+        if (
+            !path ||
+            !path.startsWith("/") ||
+            path.startsWith("//")
+        ) {
+            return path;
+        }
+
+        return `${projectBasePath}${path}`;
+    }
+
+    function normalizeRootRelativeAttributes(markup) {
+        if (!projectBasePath) {
+            return markup;
+        }
+
+        return markup.replace(
+            /\b(href|src|data-include)="\/(?!\/)([^"]*)"/g,
+            `$1="${projectBasePath}/$2"`
+        );
+    }
+
     function showLoadError(element, filePath, error) {
         const errorContainer = document.createElement("div");
         const errorMessage = document.createElement("p");
@@ -28,7 +68,7 @@
         element.setAttribute("aria-busy", "true");
 
         try {
-            const response = await fetch(filePath, {
+            const response = await fetch(withProjectBase(filePath), {
                 cache: "no-store"
             });
 
@@ -38,7 +78,9 @@
                 );
             }
 
-            const sectionContent = await response.text();
+            const sectionContent = normalizeRootRelativeAttributes(
+                await response.text()
+            );
 
             element.innerHTML = sectionContent;
             element.classList.remove("section-error");
