@@ -30,6 +30,75 @@ main {
     width: 100%;
 }
 
+.js-enabled .static-fallback {
+    display: none;
+}
+
+.static-fallback {
+    display: flex;
+    align-items: center;
+
+    min-height: 100vh;
+    padding: 96px 24px;
+
+    background-color: #ffffff;
+}
+
+.static-fallback__inner {
+    width: min(100%, 960px);
+    margin-inline: auto;
+}
+
+.static-fallback__eyebrow {
+    margin: 0 0 16px;
+
+    color: var(--color-primary);
+
+    font-size: 14px;
+    font-weight: var(--font-extrabold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.static-fallback h1 {
+    max-width: 760px;
+    margin: 0;
+
+    color: var(--color-black);
+
+    font-size: clamp(42px, 7vw, 86px);
+    font-weight: var(--font-extrabold);
+    line-height: 1.02;
+}
+
+.static-fallback p:not(.static-fallback__eyebrow) {
+    max-width: 620px;
+    margin: 24px 0 0;
+
+    color: var(--color-text-gray);
+
+    font-size: clamp(17px, 2vw, 22px);
+    line-height: 1.7;
+}
+
+.static-fallback a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 56px;
+    margin-top: 32px;
+    padding: 14px 28px;
+
+    background-color: var(--color-primary);
+    border-radius: 6px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: var(--font-bold);
+}
+
 ::selection {
     background-color: var(--color-primary);
     color: var(--color-white);
