@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/global.css">
 
-    <link rel="stylesheet" href="/css/global-header.css">
+    <link rel="stylesheet" href="css/global-header.css">
 
     <!-- Section CSS -->
     <link rel="stylesheet" href="css/home.css">
@@ -46,7 +46,6 @@
     <link rel="stylesheet" href="css/coverage.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="/css/location.css">
 
     <!-- Responsive CSS diletakkan terakhir -->
     <link rel="stylesheet" href="css/responsive.css">
@@ -54,11 +53,32 @@
 
 <body>
 
+    <section class="static-fallback" aria-label="Ringkasan website">
+        <div class="static-fallback__inner">
+            <p class="static-fallback__eyebrow">
+                PT. TRI WIRA SAKTI
+            </p>
+
+            <h1>
+                Supplier Material Bangunan Bali
+            </h1>
+
+            <p>
+                Distributor dan supplier material bangunan untuk kebutuhan
+                retail, grosir, dan supply proyek di Bali.
+            </p>
+
+            <a href="https://wa.me/6281234515281">
+                Hubungi Sales
+            </a>
+        </div>
+    </section>
+
     <!-- =====================================================
          HEADER
          Konten berasal dari sections/global-header.html
     ====================================================== -->
-    <div data-include="/sections/global-header.html"></div>
+    <div data-include="sections/global-header.html"></div>
 
 
     <!-- =====================================================
@@ -96,9 +116,6 @@
             data-include="sections/coverage.html"
         ></div>
 
-        <!-- Lokasi -->
-        <div class="section-include" data-include="sections/location.html"></div>
-
         <!-- Kontak -->
         <div
             class="section-include"
@@ -133,8 +150,8 @@
          include.js harus dijalankan terlebih dahulu karena
          bertugas memuat seluruh file HTML section.
     ====================================================== -->
-    <script src="/js/include.js" defer></script>
-    <script src="/js/global-header.js" defer></script>
+    <script src="js/include.js" defer></script>
+    <script src="js/global-header.js" defer></script>
     <script src="js/main.js" defer></script>
 
 </body>
