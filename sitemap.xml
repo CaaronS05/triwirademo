@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.triwirasakti.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Produk: Bata Ringan -->
+  <url>
+    <loc>https://www.triwirasakti.com/product/bata-ringan/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Produk: Semen -->
+  <url>
+    <loc>https://www.triwirasakti.com/product/semen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Produk: Perekat dan Plaster -->
+  <url>
+    <loc>https://www.triwirasakti.com/product/perekat-plaster/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Produk: Flooring dan Natural Stone -->
+  <url>
+    <loc>https://www.triwirasakti.com/product/flooring-natural-stone/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Produk: Batu Alam -->
+  <url>
+    <loc>https://www.triwirasakti.com/product/batu-alam/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Produk: Solid Surface -->
+  <url>
+    <loc>https://www.triwirasakti.com/product/solid-surface/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

@@ -767,7 +767,8 @@
     height: 100%;
 }
 
-.product-hero-service h2 {
+.product-hero-service h2,
+.product-hero-service-label {
     margin: 14px 0 0;
 
     color: var(--stage-one-black);
@@ -1281,7 +1282,8 @@
         height: 45px;
     }
 
-    .product-hero-service h2 {
+    .product-hero-service h2,
+    .product-hero-service-label {
         font-size: 13px;
     }
 }
